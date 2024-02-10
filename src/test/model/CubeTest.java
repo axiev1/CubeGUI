@@ -25,12 +25,20 @@ class CubeTest {
 
     @Test
     void testRotateFace() {
+        cube.rotateFace("U", true, 2);
+        cube.rotateFace("D", true,2);
+        cube.rotateFace("R", true, 2);
+        cube.rotateFace("L", true, 2);
+        cube.rotateFace("F", true, 2);
+        cube.rotateFace("B", true, 2);
+
         cube.printCube();
-        cube.rotateFace("F", true);
-        cube.printCube();
-        cube.rotateFace("R", true);
-        cube.printCube();
-        cube.rotateFace("U", true);
+    }
+
+    @Test
+    void testScramble() {
+        cube.scramble();
+
         cube.printCube();
     }
 }

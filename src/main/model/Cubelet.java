@@ -1,6 +1,6 @@
 package model;
 
-public class Cubelet {
+public abstract class Cubelet {
     private String colorX;
     private String colorY;
     private String colorZ;
@@ -74,4 +74,10 @@ public class Cubelet {
             setColorZ(colorX);
         }
     }
+
+    public Position getTargetPos() {
+        return targetPos;
+    }
+
+    public abstract void scrambleColors();
 }

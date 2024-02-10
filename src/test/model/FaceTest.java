@@ -47,6 +47,5 @@ class FaceTest {
             }
         }
         System.out.println(Arrays.deepToString(face.getOrderedCubelets()));
-
     }
 }

@@ -1,36 +1,65 @@
 package model;
 
 import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
+import java.util.*;
+
 
 public class Cube {
-    private ArrayList<CenterCubelet> centerCubelets;
-    private ArrayList<EdgeCubelet> edgeCubelets;
-    private ArrayList<CornerCubelet> cornerCubelets;
+    private LinkedList<CenterCubelet> centerCubelets;
+    private LinkedList<EdgeCubelet> edgeCubelets;
+    private LinkedList<CornerCubelet> cornerCubelets;
 
     // Effects: Initializes a default cube
     public Cube() {
-        this.centerCubelets = new ArrayList<CenterCubelet>();
-        this.edgeCubelets = new ArrayList<EdgeCubelet>();
-        this.cornerCubelets = new ArrayList<CornerCubelet>();
+        this.centerCubelets = new LinkedList<>();
+        this.edgeCubelets = new LinkedList<>();
+        this.cornerCubelets = new LinkedList<>();
 
         generateStartingPositions();
     }
 
-    public void rotateFace(String orientation, boolean clockwise) {
+    public void rotateFace(String orientation, boolean clockwise, int count) {
         Face face = getFace(orientation);
-        if (clockwise) {
-            face.rotateFaceClockwise();
-        } else {
-            face.rotateFaceCounterClockwise();
+        for (int i = 0; i < count; i++) {
+            if (clockwise) {
+                face.rotateFaceClockwise();
+            } else {
+                face.rotateFaceCounterClockwise();
+            }
         }
     }
 
-    public void scramble() {
 
+    @SuppressWarnings("methodlength")
+    public void scramble() {
+        Collections.shuffle(edgeCubelets);
+        Collections.shuffle(cornerCubelets);
+
+        EdgeCubelet ec;
+        CornerCubelet cc;
+
+        int numberOfZeroVals;
+        for (int x = -1; x <= 1; x++) {
+            for (int y = -1; y <= 1; y++) {
+                for (int z = -1; z <= 1; z++) {
+                    numberOfZeroVals = ((x == 0) ? 1 : 0) + ((y == 0) ? 1 : 0) + ((z == 0) ? 1 : 0);
+                    switch (numberOfZeroVals) {
+                        case 0:
+                            cc = cornerCubelets.poll();
+                            cc.setPos(new Position(x, y, z));
+                            cc.scrambleColors();
+                            cornerCubelets.add(cc);
+                            break;
+                        case 1:
+                            ec = edgeCubelets.poll();
+                            ec.setPos(new Position(x, y, z));
+                            ec.scrambleColors();
+                            edgeCubelets.add(ec);
+                            break;
+                    }
+                }
+            }
+        }
     }
 
     public Face getFace(String orientation) {
@@ -109,7 +138,6 @@ public class Cube {
 
     private void generateStartingPositions() {
         int numberOfZeroVals;
-        Position pos;
         for (int x = -1; x <= 1; x++) {
             for (int y = -1; y <= 1; y++) {
                 for (int z = -1; z <= 1; z++) {

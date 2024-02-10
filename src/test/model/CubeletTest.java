@@ -9,7 +9,7 @@ class CubeletTest {
     private Cubelet cubelet;
     @BeforeEach
     void setUp() {
-        cubelet = new Cubelet(new Position(-1, 0, 1));
+        cubelet = new CenterCubelet(new Position(-1, 0, 1));
     }
 
     @Test
@@ -21,5 +21,6 @@ class CubeletTest {
 
     @Test
     void isInFace() {
+        System.out.println((int)(Math.random() * 3));
     }
 }

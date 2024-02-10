@@ -35,9 +35,8 @@ public class Position {
                 return (posY == 1);
             case "D":
                 return (posZ == -1);
-            case "U":
+            default:
                 return (posZ == 1);
         }
-        return false;
     }
 }
