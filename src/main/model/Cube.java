@@ -60,6 +60,90 @@ public class Cube {
                 }
             }
         }
+
+        if (!isValid()) {
+            scramble();
+        }
+    }
+
+    public boolean isValid() {
+        return cornerParity() && edgeParity() && cycleParity();
+    }
+
+    private boolean cornerParity() {
+        int turns = 0;
+        for (CornerCubelet c : cornerCubelets) {
+            turns += c.getClockwiseTurns();
+        }
+        return (turns % 3 == 0);
+    }
+
+    private boolean edgeParity() {
+        int numKeyColorsOnKeyFaces = 0;
+        for (EdgeCubelet c : edgeCubelets) {
+            numKeyColorsOnKeyFaces += c.keyColorOnKeyFace();
+        }
+        return (numKeyColorsOnKeyFaces % 2 == 0);
+    }
+
+    private boolean cycleParity() {
+        int totalCycleLength = 0;
+        ArrayList<ArrayList<Position>> cycles = getCycles();
+
+        for (ArrayList<Position> cycle : cycles) {
+            if (cycle.size() % 2 == 0) {
+                totalCycleLength++;
+            }
+        }
+
+        return (totalCycleLength % 2 == 0);
+    }
+
+    private ArrayList<ArrayList<Position>> getCycles() {
+        ArrayList<ArrayList<Position>> res = new ArrayList<>();
+        ArrayList<Position> visited = new ArrayList<>();
+
+        for (Cubelet c : cornerCubelets) {
+            if (!visited.contains(c.getPos()) && !c.getPos().equals(c.getTargetPos())) {
+                res.add(dfs(c, visited, new ArrayList<Position>()));
+            }
+        }
+
+        for (Cubelet c : edgeCubelets) {
+            if (!visited.contains(c.getPos()) && !c.getPos().equals(c.getTargetPos())) {
+                res.add(dfs(c, visited, new ArrayList<Position>()));
+            }
+        }
+
+        return res;
+    }
+
+    private ArrayList<Position> dfs(Cubelet c, ArrayList<Position> visited, ArrayList<Position> rsf) {
+        if (visited.contains(c.getPos())) {
+            return rsf;
+        }
+        rsf.add(c.getPos());
+        visited.add(c.getPos());
+        return dfs(getCubeletAtPos(c.getTargetPos()), visited, rsf);
+    }
+
+    private Cubelet getCubeletAtPos(Position pos) {
+        for (Cubelet c : cornerCubelets) {
+            if (c.getPos().equals(pos)) {
+                return c;
+            }
+        }
+        for (Cubelet c : edgeCubelets) {
+            if (c.getPos().equals(pos)) {
+                return c;
+            }
+        }
+        for (Cubelet c : centerCubelets) {
+            if (c.getPos().equals(pos)) {
+                return c;
+            }
+        }
+        return null;
     }
 
     public Face getFace(String orientation) {

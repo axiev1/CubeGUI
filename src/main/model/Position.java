@@ -23,7 +23,7 @@ public class Position {
         return posZ;
     }
 
-    public Boolean isInFace(String face) {
+    public boolean isInFace(String face) {
         switch (face) {
             case "L":
                 return (posX == -1);
@@ -38,5 +38,9 @@ public class Position {
             default:
                 return (posZ == 1);
         }
+    }
+
+    public boolean equals(Position pos2) {
+        return (posX == pos2.getX() && posY == pos2.getY() && posZ == pos2.getZ());
     }
 }
