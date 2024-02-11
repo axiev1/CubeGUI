@@ -2,6 +2,8 @@ package ui;
 
 import model.Cube;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,8 +18,13 @@ public class Main {
         }
     }
 
+    @SuppressWarnings("methodlength")
     public static boolean getUserInput(Scanner scan, CubeHandler cubeHandler) {
         String input = scan.nextLine();
+
+        Pattern p = Pattern.compile("^(load [\\d])");
+        Matcher load = p.matcher(input);
+
         if (input.equalsIgnoreCase("h")) {
             printHelpMessage();
         } else if (input.equalsIgnoreCase("exit")) {
@@ -30,6 +37,12 @@ public class Main {
         } else if (input.equalsIgnoreCase("reset")) {
             cubeHandler.reset();
             cubeHandler.print();
+        } else if (input.equalsIgnoreCase("save")) {
+            cubeHandler.saveCube();
+        } else if (input.equalsIgnoreCase("view")) {
+            cubeHandler.viewSavedCubes();
+        } else if (load.find()) {
+            cubeHandler.loadCube(Integer.parseInt(input.substring(5)));
         } else {
             cubeHandler.parseTurn(input);
             cubeHandler.print();

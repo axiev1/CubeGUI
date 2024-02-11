@@ -11,6 +11,12 @@ public class Position {
         this.posZ = z;
     }
 
+    public Position(Position pos) {
+        this.posX = pos.getX();
+        this.posY = pos.getY();
+        this.posZ = pos.getZ();
+    }
+
     public int getX() {
         return posX;
     }

@@ -5,6 +5,10 @@ public class EdgeCubelet extends Cubelet {
         super(pos);
     }
 
+    public EdgeCubelet(EdgeCubelet c) {
+        super(c);
+    }
+
     @SuppressWarnings("methodlength")
     @Override
     public void scrambleColors() {

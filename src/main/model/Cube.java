@@ -3,13 +3,13 @@ package model;
 import java.sql.Array;
 import java.util.*;
 
-
+// represents a cube
 public class Cube {
     private LinkedList<CenterCubelet> centerCubelets;
     private LinkedList<EdgeCubelet> edgeCubelets;
     private LinkedList<CornerCubelet> cornerCubelets;
 
-    // Effects: Initializes a default cube
+    // EFFECTS: Initializes a cube in the solved state
     public Cube() {
         this.centerCubelets = new LinkedList<>();
         this.edgeCubelets = new LinkedList<>();
@@ -18,6 +18,38 @@ public class Cube {
         generateStartingPositions();
     }
 
+    public Cube(Cube cube) {
+        this.centerCubelets = new LinkedList<>();
+        this.edgeCubelets = new LinkedList<>();
+        this.cornerCubelets = new LinkedList<>();
+
+        for (CenterCubelet c : cube.getCenterCubelets()) {
+            this.centerCubelets.add(new CenterCubelet(c));
+        }
+        for (EdgeCubelet c : cube.getEdgeCubelets()) {
+            this.edgeCubelets.add(new EdgeCubelet(c));
+        }
+        for (CornerCubelet c : cube.getCornerCubelets()) {
+            this.cornerCubelets.add(new CornerCubelet(c));
+        }
+    }
+
+    public LinkedList<CenterCubelet> getCenterCubelets() {
+        return centerCubelets;
+    }
+
+    public LinkedList<EdgeCubelet> getEdgeCubelets() {
+        return edgeCubelets;
+    }
+
+    public LinkedList<CornerCubelet> getCornerCubelets() {
+        return cornerCubelets;
+    }
+
+    // REQUIRES: Orientation is one of U L F R B D
+    // MODIFIES: this
+    // EFFECTS: Rotates the face of the cube as given by orientation either clockwise or counterclockwise, count
+    //          amount of times
     public void rotateFace(String orientation, boolean clockwise, int count) {
         Face face = getFace(orientation);
         for (int i = 0; i < count; i++) {
@@ -29,7 +61,8 @@ public class Cube {
         }
     }
 
-
+    // MODIFIES: this
+    // EFFECTS: Scrambles the cube
     @SuppressWarnings("methodlength")
     public void scramble() {
         Collections.shuffle(edgeCubelets);
@@ -66,10 +99,12 @@ public class Cube {
         }
     }
 
+    // EFFECTS: Returns true if the cube is in a solvable state
     public boolean isValid() {
         return cornerParity() && edgeParity() && cycleParity();
     }
 
+    // EFFECTS: returns true if the cube has the correct corner parity
     private boolean cornerParity() {
         int turns = 0;
         for (CornerCubelet c : cornerCubelets) {
@@ -78,6 +113,7 @@ public class Cube {
         return (turns % 3 == 0);
     }
 
+    // EFFECTS: returns true if the cube has correct edge parity
     private boolean edgeParity() {
         int numKeyColorsOnKeyFaces = 0;
         for (EdgeCubelet c : edgeCubelets) {
@@ -86,6 +122,7 @@ public class Cube {
         return (numKeyColorsOnKeyFaces % 2 == 0);
     }
 
+    // EFFECTS: returns true if the edge and corner pieces have the correct parity
     private boolean cycleParity() {
         int totalCycleLength = 0;
         ArrayList<ArrayList<Position>> cycles = getCycles();
@@ -95,10 +132,11 @@ public class Cube {
                 totalCycleLength++;
             }
         }
-
         return (totalCycleLength % 2 == 0);
     }
 
+    // EFFECTS: returns the list of all cycles in the Rubik's cube. For example, position A has piece C. Piece C should
+    //          be in position B, which has Piece A. The cycle is (A, C, B).
     private ArrayList<ArrayList<Position>> getCycles() {
         ArrayList<ArrayList<Position>> res = new ArrayList<>();
         ArrayList<Position> visited = new ArrayList<>();
@@ -118,6 +156,7 @@ public class Cube {
         return res;
     }
 
+    // EFFECTS: Returns a cycle starting at a given cubelet
     private ArrayList<Position> dfs(Cubelet c, ArrayList<Position> visited, ArrayList<Position> rsf) {
         if (visited.contains(c.getPos())) {
             return rsf;
@@ -127,6 +166,8 @@ public class Cube {
         return dfs(getCubeletAtPos(c.getTargetPos()), visited, rsf);
     }
 
+    // REQUIRES: pos.getX(), pos.getY(), and pos.getZ() are all one of -1, 0, and 1.
+    // EFFECTS: return Cubelet at a given position
     private Cubelet getCubeletAtPos(Position pos) {
         for (Cubelet c : cornerCubelets) {
             if (c.getPos().equals(pos)) {
@@ -146,6 +187,8 @@ public class Cube {
         return null;
     }
 
+    // REQUIRES: orientation is one of U, L, F, R, B, or D
+    // EFFECTS: returns face at given orientation
     public Face getFace(String orientation) {
         CenterCubelet center = null;
 
@@ -173,6 +216,7 @@ public class Cube {
         return face;
     }
 
+    // EFFECTS: prints out the cube to the console
     public void printCube() {
         String[][] faceU = getFace("U").to2DStringArray();
         String[][] faceL = getFace("L").to2DStringArray();
@@ -196,6 +240,7 @@ public class Cube {
         printFace(faceD, true);
     }
 
+    // EFFECTS: prints out a face to the console
     private void printFace(String[][] faceToPrint, boolean padding) {
 
         String row0 = "| " + String.join(" | ", faceToPrint[0]) + " |";
@@ -220,6 +265,7 @@ public class Cube {
         System.out.println(dashSeparator);
     }
 
+    // EFFECTS: generates cubelets at starting positions
     private void generateStartingPositions() {
         int numberOfZeroVals;
         for (int x = -1; x <= 1; x++) {

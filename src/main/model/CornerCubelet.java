@@ -5,6 +5,10 @@ public class CornerCubelet extends Cubelet {
         super(pos);
     }
 
+    public CornerCubelet(CornerCubelet c) {
+        super(c);
+    }
+
     @Override
     public void scrambleColors() {
         // Clockwise XYZ: (1, -1, 1) (-1, 1, 1) (1, 1, -1) (-1, -1, -1)

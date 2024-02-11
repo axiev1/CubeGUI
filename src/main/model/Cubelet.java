@@ -13,6 +13,14 @@ public abstract class Cubelet {
         setColors();
     }
 
+    public Cubelet(Cubelet c) {
+        this.colorX = c.getColorX();
+        this.colorY = c.getColorY();
+        this.colorZ = c.getColorZ();
+        this.currentPos = new Position(c.getPos());
+        this.targetPos = new Position(c.getTargetPos());
+    }
+
     private void setColors() {
         String[] colorsX = new String[] {"O", null, "R"};
         String[] colorsY = new String[] {"G", null, "B"};

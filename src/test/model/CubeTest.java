@@ -10,12 +10,11 @@ class CubeTest {
     @BeforeEach
     void runBefore() {
         cube = new Cube();
-
     }
 
     @Test
     void testCube() {
-
+        cube.getCenterCubelets();
     }
 
     @Test

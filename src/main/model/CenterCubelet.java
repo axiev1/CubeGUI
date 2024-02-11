@@ -6,6 +6,10 @@ public class CenterCubelet extends Cubelet {
         super(pos);
     }
 
+    public CenterCubelet(CenterCubelet c) {
+        super(c);
+    }
+
     @Override
     public void scrambleColors() {
         return;
