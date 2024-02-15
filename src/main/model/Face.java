@@ -1,10 +1,8 @@
 package model;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
+// represents a face of a Rubik's cube
 public class Face {
     private CenterCubelet center;
     private ArrayList<EdgeCubelet> edges;

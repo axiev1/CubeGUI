@@ -5,7 +5,7 @@ public class CornerCubelet extends Cubelet {
         super(pos);
     }
 
-    public CornerCubelet(CornerCubelet c) {
+    public CornerCubelet(Cubelet c) {
         super(c);
     }
 

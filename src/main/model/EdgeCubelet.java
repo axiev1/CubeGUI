@@ -5,7 +5,7 @@ public class EdgeCubelet extends Cubelet {
         super(pos);
     }
 
-    public EdgeCubelet(EdgeCubelet c) {
+    public EdgeCubelet(Cubelet c) {
         super(c);
     }
 

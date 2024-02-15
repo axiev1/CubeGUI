@@ -6,7 +6,7 @@ public class CenterCubelet extends Cubelet {
         super(pos);
     }
 
-    public CenterCubelet(CenterCubelet c) {
+    public CenterCubelet(Cubelet c) {
         super(c);
     }
 

@@ -3,7 +3,7 @@ package model;
 import java.sql.Array;
 import java.util.*;
 
-// represents a cube
+// represents a Rubik's cube
 public class Cube {
     private LinkedList<CenterCubelet> centerCubelets;
     private LinkedList<EdgeCubelet> edgeCubelets;
