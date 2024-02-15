@@ -18,6 +18,7 @@ public class Cube {
         generateStartingPositions();
     }
 
+    // EFFECTS: Copy constructor for cube
     public Cube(Cube cube) {
         this.centerCubelets = new LinkedList<>();
         this.edgeCubelets = new LinkedList<>();
@@ -63,39 +64,44 @@ public class Cube {
 
     // MODIFIES: this
     // EFFECTS: Scrambles the cube
-    @SuppressWarnings("methodlength")
     public void scramble() {
-        Collections.shuffle(edgeCubelets);
-        Collections.shuffle(cornerCubelets);
-
-        EdgeCubelet ec;
-        CornerCubelet cc;
-
-        int numberOfZeroVals;
-        for (int x = -1; x <= 1; x++) {
-            for (int y = -1; y <= 1; y++) {
-                for (int z = -1; z <= 1; z++) {
-                    numberOfZeroVals = ((x == 0) ? 1 : 0) + ((y == 0) ? 1 : 0) + ((z == 0) ? 1 : 0);
-                    switch (numberOfZeroVals) {
-                        case 0:
-                            cc = cornerCubelets.poll();
-                            cc.setPos(new Position(x, y, z));
-                            cc.scrambleColors();
-                            cornerCubelets.add(cc);
-                            break;
-                        case 1:
-                            ec = edgeCubelets.poll();
-                            ec.setPos(new Position(x, y, z));
-                            ec.scrambleColors();
-                            edgeCubelets.add(ec);
-                            break;
+        while (true) {
+            Collections.shuffle(edgeCubelets);
+            Collections.shuffle(cornerCubelets);
+            for (int x = -1; x <= 1; x++) {
+                for (int y = -1; y <= 1; y++) {
+                    for (int z = -1; z <= 1; z++) {
+                        assignRandom(x, y, z);
                     }
                 }
             }
+            if (isValid()) {
+                return;
+            }
         }
+    }
 
-        if (!isValid()) {
-            scramble();
+    // REQUIRES: x, y, and z are one of -1, 1, or 1
+    // MODIFIES: this
+    // EFFECTS: Assigns a random cubelet of the correct type in the given position
+    private void assignRandom(int x, int y, int z) {
+        EdgeCubelet ec;
+        CornerCubelet cc;
+
+        int numberOfZeroVals = ((x == 0) ? 1 : 0) + ((y == 0) ? 1 : 0) + ((z == 0) ? 1 : 0);
+        switch (numberOfZeroVals) {
+            case 0:
+                cc = cornerCubelets.poll();
+                cc.setPos(new Position(x, y, z));
+                cc.scrambleColors();
+                cornerCubelets.add(cc);
+                break;
+            case 1:
+                ec = edgeCubelets.poll();
+                ec.setPos(new Position(x, y, z));
+                ec.scrambleColors();
+                edgeCubelets.add(ec);
+                break;
         }
     }
 
@@ -212,57 +218,7 @@ public class Cube {
                 face.addCorner(cc);
             }
         }
-
         return face;
-    }
-
-    // EFFECTS: prints out the cube to the console
-    public void printCube() {
-        String[][] faceU = getFace("U").to2DStringArray();
-        String[][] faceL = getFace("L").to2DStringArray();
-        String[][] faceF = getFace("F").to2DStringArray();
-        String[][] faceR = getFace("R").to2DStringArray();
-        String[][] faceB = getFace("B").to2DStringArray();
-        String[][] faceD = getFace("D").to2DStringArray();
-
-        String[][] middle = new String[3][12];
-
-        for (int y = 0; y < 3; y++) {
-            String[] combined = Arrays.copyOf(faceL[y], 12);
-            System.arraycopy(faceF[y], 0, combined, 3, 3);
-            System.arraycopy(faceR[y], 0, combined, 6, 3);
-            System.arraycopy(faceB[y], 0, combined, 9, 3);
-            middle[y] = combined;
-        }
-
-        printFace(faceU, true);
-        printFace(middle, false);
-        printFace(faceD, true);
-    }
-
-    // EFFECTS: prints out a face to the console
-    private void printFace(String[][] faceToPrint, boolean padding) {
-
-        String row0 = "| " + String.join(" | ", faceToPrint[0]) + " |";
-        String row1 = "| " + String.join(" | ", faceToPrint[1]) + " |";
-        String row2 = "| " + String.join(" | ", faceToPrint[2]) + " |";
-        String dashSeparator = "-".repeat(row0.length());
-
-        if (padding) {
-            String whitespace = " ".repeat(row0.length() - 1);
-            row0 = whitespace + row0;
-            row1 = whitespace + row1;
-            row2 = whitespace + row2;
-            dashSeparator = whitespace + dashSeparator;
-        }
-
-        System.out.println(dashSeparator);
-        System.out.println(row0);
-        System.out.println(dashSeparator);
-        System.out.println(row1);
-        System.out.println(dashSeparator);
-        System.out.println(row2);
-        System.out.println(dashSeparator);
     }
 
     // EFFECTS: generates cubelets at starting positions
