@@ -5,7 +5,7 @@ import java.util.*;
 
 // represents a Rubik's cube
 public class Cube {
-    private LinkedList<CenterCubelet> centerCubelets;
+    private LinkedList<Cubelet> centerCubelets;
     private LinkedList<EdgeCubelet> edgeCubelets;
     private LinkedList<CornerCubelet> cornerCubelets;
 
@@ -24,8 +24,8 @@ public class Cube {
         this.edgeCubelets = new LinkedList<>();
         this.cornerCubelets = new LinkedList<>();
 
-        for (CenterCubelet c : cube.getCenterCubelets()) {
-            this.centerCubelets.add(new CenterCubelet(c));
+        for (Cubelet c : cube.getCenterCubelets()) {
+            this.centerCubelets.add(new Cubelet(c));
         }
         for (EdgeCubelet c : cube.getEdgeCubelets()) {
             this.edgeCubelets.add(new EdgeCubelet(c));
@@ -35,7 +35,7 @@ public class Cube {
         }
     }
 
-    public LinkedList<CenterCubelet> getCenterCubelets() {
+    public LinkedList<Cubelet> getCenterCubelets() {
         return centerCubelets;
     }
 
@@ -188,8 +188,7 @@ public class Cube {
     // REQUIRES: orientation is one of U, L, F, R, B, or D
     // EFFECTS: returns face at given orientation
     public Face getFace(String orientation) {
-        CenterCubelet center = centerCubelets.stream().filter(c -> c.isInFace(orientation))
-                .findFirst().orElse(null);
+        Cubelet center = centerCubelets.stream().filter(c -> c.isInFace(orientation)).findFirst().orElse(null);
 
         Face face = new Face(orientation, center);
 
@@ -222,7 +221,7 @@ public class Cube {
                             edgeCubelets.add(new EdgeCubelet(new Position(x, y, z)));
                             break;
                         case 2:
-                            centerCubelets.add(new CenterCubelet(new Position(x, y, z)));
+                            centerCubelets.add(new Cubelet(new Position(x, y, z)));
                             break;
                     }
                 }

@@ -1,7 +1,7 @@
 package model;
 
 // Represents a cubelet, one of the smaller cubes that make up the Rubik's cube
-public abstract class Cubelet {
+public class Cubelet {
     private String colorX;
     private String colorY;
     private String colorZ;

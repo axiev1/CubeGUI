@@ -11,7 +11,7 @@ class CubeletTest {
     private Cubelet corner;
     @BeforeEach
     void setUp() {
-        center = new CenterCubelet(new Position(0, 0, 1));
+        center = new Cubelet(new Position(0, 0, 1));
         edge = new EdgeCubelet(new Position(-1, 0, 1));
         corner = new CornerCubelet(new Position(-1, -1, 1));
     }
@@ -33,7 +33,7 @@ class CubeletTest {
 
     @Test
     void testCopyCube() {
-        Cubelet center2 = new CenterCubelet(center);
+        Cubelet center2 = new Cubelet(center);
         assertTrue(center.getPos().equals(center2.getPos()));
         assertTrue(center.getTargetPos().equals(center2.getTargetPos()));
         assertEquals(center.getColorX(), center2.getColorX());

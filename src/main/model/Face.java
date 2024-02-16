@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 // represents a face of a Rubik's cube
 public class Face {
-    private CenterCubelet center;
+    private Cubelet center;
     private ArrayList<EdgeCubelet> edges;
     private ArrayList<CornerCubelet> corners;
     private String orientation;
 
-    public Face(String orientation, CenterCubelet center) {
+    public Face(String orientation, Cubelet center) {
         this.orientation = orientation;
         this.center = center;
         this.edges = new ArrayList<EdgeCubelet>();
@@ -28,7 +28,7 @@ public class Face {
         return orientation;
     }
 
-    public CenterCubelet getCenter() {
+    public Cubelet getCenter() {
         return center;
     }
 

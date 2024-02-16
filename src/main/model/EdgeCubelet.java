@@ -9,20 +9,9 @@ public class EdgeCubelet extends Cubelet {
         super(c);
     }
 
-    @SuppressWarnings("methodlength")
     public void scrambleColors() {
-        String color1;
-        String color2;
-        if (getTargetPos().getX() == 0) {
-            color1 = getColorY();
-            color2 = getColorZ();
-        } else if (getTargetPos().getY() == 0) {
-            color1 = getColorX();
-            color2 = getColorZ();
-        } else {
-            color1 = getColorX();
-            color2 = getColorY();
-        }
+        String color1 = getColor1();
+        String color2 = getColor2();
 
         if (Math.random() < 0.5) {
             String swap = color1;
@@ -43,6 +32,30 @@ public class EdgeCubelet extends Cubelet {
             setColorY(color2);
             setColorZ(null);
         }
+    }
+
+    private String getColor1() {
+        String color1;
+        if (getTargetPos().getX() == 0) {
+            color1 = getColorY();
+        } else if (getTargetPos().getY() == 0) {
+            color1 = getColorX();
+        } else {
+            color1 = getColorX();
+        }
+        return color1;
+    }
+
+    private String getColor2() {
+        String color2;
+        if (getTargetPos().getX() == 0) {
+            color2 = getColorZ();
+        } else if (getTargetPos().getY() == 0) {
+            color2 = getColorZ();
+        } else {
+            color2 = getColorY();
+        }
+        return color2;
     }
 
     public int keyColorOnKeyFace() {

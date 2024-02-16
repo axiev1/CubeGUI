@@ -13,8 +13,8 @@ class FaceTest {
 
     @BeforeEach
     void runBefore() {
-        face1 = new Face("L", new CenterCubelet(new Position(-1, 0, 0)));
-        face2 = new Face("U", new CenterCubelet(new Position(0, 0, 1)));
+        face1 = new Face("L", new Cubelet(new Position(-1, 0, 0)));
+        face2 = new Face("U", new Cubelet(new Position(0, 0, 1)));
 
         face2.addCorner(new CornerCubelet(new Position(-1, -1, 1)));
         face2.addCorner(new CornerCubelet(new Position(1, -1, 1)));
