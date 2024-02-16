@@ -9,9 +9,4 @@ public class CenterCubelet extends Cubelet {
     public CenterCubelet(Cubelet c) {
         super(c);
     }
-
-    @Override
-    public void scrambleColors() {
-        return;
-    }
 }

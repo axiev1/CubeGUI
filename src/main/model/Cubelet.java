@@ -96,6 +96,4 @@ public abstract class Cubelet {
     public Position getTargetPos() {
         return targetPos;
     }
-
-    public abstract void scrambleColors();
 }

@@ -10,8 +10,8 @@ public class Face {
     private String orientation;
 
     public Face(String orientation, CenterCubelet center) {
-        this.center = center;
         this.orientation = orientation;
+        this.center = center;
         this.edges = new ArrayList<EdgeCubelet>();
         this.corners = new ArrayList<CornerCubelet>();
     }
@@ -22,6 +22,22 @@ public class Face {
 
     public void addCorner(CornerCubelet c) {
         corners.add(c);
+    }
+
+    public String getOrientation() {
+        return orientation;
+    }
+
+    public CenterCubelet getCenter() {
+        return center;
+    }
+
+    public ArrayList<EdgeCubelet> getEdges() {
+        return edges;
+    }
+
+    public ArrayList<CornerCubelet> getCorners() {
+        return corners;
     }
 
     public String[][] to2DStringArray() {

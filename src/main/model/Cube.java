@@ -66,6 +66,10 @@ public class Cube {
     // EFFECTS: Scrambles the cube
     public void scramble() {
         while (true) {
+            centerCubelets.clear();
+            edgeCubelets.clear();
+            cornerCubelets.clear();
+            generateStartingPositions();
             Collections.shuffle(edgeCubelets);
             Collections.shuffle(cornerCubelets);
             for (int x = -1; x <= 1; x++) {

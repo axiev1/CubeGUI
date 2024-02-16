@@ -10,7 +10,6 @@ public class EdgeCubelet extends Cubelet {
     }
 
     @SuppressWarnings("methodlength")
-    @Override
     public void scrambleColors() {
         String color1;
         String color2;
@@ -32,14 +31,17 @@ public class EdgeCubelet extends Cubelet {
         }
 
         if (getPos().getX() == 0) {
+            setColorX(null);
             setColorY(color1);
             setColorZ(color2);
         } else if (getPos().getY() == 0) {
             setColorX(color1);
+            setColorY(null);
             setColorZ(color2);
         } else {
             setColorX(color1);
             setColorY(color2);
+            setColorZ(null);
         }
     }
 
