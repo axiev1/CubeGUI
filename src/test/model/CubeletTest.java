@@ -32,7 +32,7 @@ class CubeletTest {
     }
 
     @Test
-    void testCopyCube() {
+    void testCopyCubelet() {
         Cubelet center2 = new Cubelet(center);
         assertTrue(center.getPos().equals(center2.getPos()));
         assertTrue(center.getTargetPos().equals(center2.getTargetPos()));

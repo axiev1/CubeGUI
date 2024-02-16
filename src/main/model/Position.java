@@ -1,16 +1,19 @@
 package model;
 
+// Represents a position of a cubelet, with an x, y, and z coordinate relative to the middle of the cube
 public class Position {
     private int posX;
     private int posY;
     private int posZ;
 
+    // EFFECTS: constructs a new position with an x, y, and z coordinate
     public Position(int x, int y, int z) {
         this.posX = x;
         this.posY = y;
         this.posZ = z;
     }
 
+    // EFFECTS: copy constructor for position
     public Position(Position pos) {
         this.posX = pos.getX();
         this.posY = pos.getY();
@@ -29,6 +32,8 @@ public class Position {
         return posZ;
     }
 
+    // REQUIRES: face is one of L, R, F, B, D, U
+    // EFFECTS: returns true if the position puts it in the given face, else false
     public boolean isInFace(String face) {
         switch (face) {
             case "L":
@@ -46,6 +51,7 @@ public class Position {
         }
     }
 
+    // EFFECTS: returns true if current position is equivalent to the given position
     public boolean equals(Position pos2) {
         return (posX == pos2.getX() && posY == pos2.getY() && posZ == pos2.getZ());
     }

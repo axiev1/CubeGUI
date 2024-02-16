@@ -1,14 +1,19 @@
 package model;
 
+// Represents an edge cubelet in the Rubik's cube
 public class EdgeCubelet extends Cubelet {
+    // EFFECTS: creates a new edge cubelet with a position
     public EdgeCubelet(Position pos) {
         super(pos);
     }
 
+    // EFFECTS: copy constructor for edge cubelet
     public EdgeCubelet(Cubelet c) {
         super(c);
     }
 
+    // MODIFIES: this
+    // EFFECTS: scrambles the colors of cubelet by randomly swapping or not swapping the colors
     public void scrambleColors() {
         String color1 = getColor1();
         String color2 = getColor2();
@@ -58,6 +63,8 @@ public class EdgeCubelet extends Cubelet {
         return color2;
     }
 
+    // EFFECTS: returns 1 if the up or down color is on the up or down face, or if the edge cubelet does not have an
+    //          up or down color, returns 1 if the left or right color is on the left or right face. Else returns 0.
     public int keyColorOnKeyFace() {
         String keyColor1 = "B";
         String keyColor2 = "G";

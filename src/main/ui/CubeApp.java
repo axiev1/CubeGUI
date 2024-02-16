@@ -4,16 +4,19 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+// 2D ui application for cube
 public class CubeApp {
     private CubeHandler cubeHandler;
     private Scanner scan;
 
+    // EFFECTS: starts the application
     public CubeApp() {
         cubeHandler = new CubeHandler();
         scan = new Scanner(System.in);
         runApp();
     }
 
+    // EFFECTS: gets user input and runs the application until user quits
     private void runApp() {
         boolean run = true;
         String command;
@@ -31,6 +34,7 @@ public class CubeApp {
         }
     }
 
+    // EFFECTS: process the input given by the user
     private void processCommand(String command) {
         Pattern p = Pattern.compile("^(load [\\d])");
         Matcher load = p.matcher(command);
@@ -41,7 +45,7 @@ public class CubeApp {
             cubeHandler.scramble();
             cubeHandler.print();
         } else if (command.equalsIgnoreCase("scramble string")) {
-            getScramble(scan, cubeHandler);
+            getScramble();
         } else if (command.equalsIgnoreCase("reset")) {
             cubeHandler.reset();
             cubeHandler.print();
@@ -57,13 +61,15 @@ public class CubeApp {
         }
     }
 
-    private void getScramble(Scanner scan, CubeHandler cubeHandler) {
+    // EFFECTS: gets and processes a scramble string from the user
+    private void getScramble() {
         System.out.println("Input your scramble string: ");
         String scrambleString = scan.nextLine();
         cubeHandler.parseScramble(scrambleString);
         cubeHandler.print();
     }
 
+    // EFFECTS: prints out the help message
     private void printHelpMessage() {
         System.out.println("To make a move, type in the name of the face to rotate it 90 degrees clockwise:");
         System.out.println("Faces (Front, Right, Up, Left, Back, Down): F R U L B D");
@@ -71,6 +77,9 @@ public class CubeApp {
         System.out.println("Add a 2 to the end of the move to make a double turn (e.g. R2, D2')");
         System.out.println("To scramble the cube, type \"scramble\"");
         System.out.println("To input a scramble string, type \"scramble string\"");
+        System.out.println("To save the current cube state, type \"save\"");
+        System.out.println("To view a list of saved cubes, type \"view\"");
+        System.out.println("To load a saved cube, type \"load (index here)\"");
         System.out.println("To reset the cube, type \"reset\"");
         System.out.println("To exit, type \"exit\"");
     }

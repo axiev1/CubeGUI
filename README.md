@@ -7,8 +7,15 @@ user given Rubik's cube.
 application to solve it for me
 
 ## User Stories
-- As a user, I want to be able to save a Rubik's cube state and add it to a list of checkpoints
-- As a user, I want to be able to view a list of moves to solve a Rubik's cube
-- As a user, I want to be able to randomly scramble the Rubik's cube
-- As a user, I want to be able to rotate the Rubik's cube in 3D and make turns
-- As a user, I want to be able to playback the solving process and adjust the playback speed
+- View a cube properly formatted in the console
+- Make rotations with user inputted commands
+- Be able to randomly scramble the Rubik's cube
+- Save the state of the cube to a list of saved states
+- View and load a cube state from the list of saved cubes
+- Be able to reset the cube to the default solved state
+- Scramble the cube according to a user inputted scramble string
+- View a list of moves needed to solve a given Rubik's cube
+- View and rotate the Cube in 3D
+- Playback the solving process of the Cube
+- Let the user create a cube
+- Be able to check whether a cube is in a solvable state

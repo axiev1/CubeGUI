@@ -5,15 +5,20 @@ import model.Cube;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+// Cube handler class to control the cube
 public class CubeHandler {
     private Cube cube;
     private ArrayList<Cube> savedCubes;
 
+    // EFFECTS: creates new cube handler object with a cube and an empty list of saved cube states
     public CubeHandler() {
         cube = new Cube();
         savedCubes = new ArrayList<>();
     }
 
+    // REQUIRES: scramble string is in proper notation
+    // MODIFIES: this
+    // EFFECTS: parses a scramble string
     public void parseScramble(String scramble) {
         String[] turns = scramble.split(" ");
         for (String turn : turns) {
@@ -21,10 +26,15 @@ public class CubeHandler {
         }
     }
 
+    // MODIFIES: this
+    // EFFECTS: scrambles the cube
     public void scramble() {
         cube.scramble();
     }
 
+    // REQUIRES: turn is a valid instruction
+    // MODIFIES: this
+    // EFFECTS: parses a turn by the user
     public void parseTurn(String turn) {
         String orientation = turn.substring(0, 1).toUpperCase();
         boolean clockwise = true;
@@ -39,20 +49,28 @@ public class CubeHandler {
         cube.rotateFace(orientation, clockwise, numTurns);
     }
 
+    // MODIFIES: this
+    // EFFECTS: resets the cube to the solved state
     public void reset() {
         cube = new Cube();
     }
 
+    // MODIFIES: this
+    // EFFECTS: saves the current cube state to a list of saved cubes
     public void saveCube() {
         savedCubes.add(new Cube(cube));
         System.out.println("Cube was saved");
     }
 
+    // REQUIRES: 1 <= index <= savedCubes.size()
+    // MODIFIES: this
+    // EFFECTS: loads a cube state from the saved states at index
     public void loadCube(int index) {
         cube = savedCubes.get(index - 1);
         print();
     }
 
+    // EFFECTS: displays the list of saved cubes
     public void viewSavedCubes() {
         for (int i = 0; i < savedCubes.size(); i++) {
             System.out.println(i + 1 + ". ");
@@ -61,10 +79,12 @@ public class CubeHandler {
         }
     }
 
+    // EFFECTS: prints out the cube
     public void print() {
         printCube(this.cube);
     }
 
+    // EFFECTS: prints out a given cube
     public void print(Cube cube) {
         printCube(cube);
     }
@@ -93,7 +113,7 @@ public class CubeHandler {
         printFace(faceD, true);
     }
 
-    // EFFECTS: prints out a face to the console
+    // EFFECTS: prints formatted 2D string array
     private void printFace(String[][] faceToPrint, boolean padding) {
 
         String row0 = "| " + String.join(" | ", faceToPrint[0]) + " |";

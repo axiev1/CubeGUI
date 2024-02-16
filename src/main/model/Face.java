@@ -9,6 +9,8 @@ public class Face {
     private ArrayList<CornerCubelet> corners;
     private String orientation;
 
+    // REQUIRES: orientation is one of U, L, F, R, B, D
+    // EFFECTS: constructs a new face with an orientation and center cubelet
     public Face(String orientation, Cubelet center) {
         this.orientation = orientation;
         this.center = center;
@@ -16,10 +18,14 @@ public class Face {
         this.corners = new ArrayList<CornerCubelet>();
     }
 
+    // MODIFIES: this
+    // EFFECTS: adds an edge cubelet to the face
     public void addEdge(EdgeCubelet c) {
         edges.add(c);
     }
 
+    // MODIFIES: this
+    // EFFECTS: adds a corner cubelet to the face
     public void addCorner(CornerCubelet c) {
         corners.add(c);
     }
@@ -40,6 +46,8 @@ public class Face {
         return corners;
     }
 
+    // REQUIRES: edges and corners are both length 4, center is defined
+    // EFFECTS: produces a 2D string array representing the colors of the face when seen head on
     public String[][] to2DStringArray() {
         Cubelet[][] orderedCubelets = getOrderedCubelets();
         String[][] colors = new String[3][3];
@@ -59,6 +67,8 @@ public class Face {
         return colors;
     }
 
+    // REQUIRES: cubelet is on face
+    // EFFECTS: returns the relative x position of a given cubelet on the face
     private int getRelativeX(Cubelet cubelet) {
         switch (orientation) {
             case "L":
@@ -74,6 +84,8 @@ public class Face {
         }
     }
 
+    // REQUIRES: cubelet is on face
+    // EFFECTS: returns the relative y position of a given cubelet on the face
     private int getRelativeY(Cubelet cubelet) {
         switch (orientation) {
             case "U":
@@ -85,6 +97,8 @@ public class Face {
         }
     }
 
+    // REQUIRES: edges and corners are both length 4, center is defined
+    // EFFECTS: returns a ordered 2D cubelet array of the cubelets within the face
     public Cubelet[][] getOrderedCubelets() {
         Cubelet[][] orderedCubelets = new Cubelet[3][3];
         ArrayList<Cubelet> allCubelets = new ArrayList<>();
@@ -99,6 +113,8 @@ public class Face {
         return orderedCubelets;
     }
 
+    // MODIFIES: this, orderedCubelets
+    // EFFECTS: corrects the colors of the cubelet after rotation of the face
     private void rotateCubeletColors(Cubelet[][] orderedCubelets) {
         for (Cubelet[] row : orderedCubelets) {
             for (Cubelet c : row) {
@@ -107,6 +123,8 @@ public class Face {
         }
     }
 
+    // MODIFIES: this
+    // EFFECTS: rotates the current face clockwise
     public void rotateFaceClockwise() {
         Cubelet[][] orderedCubelets = getOrderedCubelets();
         Position topLeftPos = orderedCubelets[0][0].getPos();
@@ -124,6 +142,8 @@ public class Face {
         rotateCubeletColors(orderedCubelets);
     }
 
+    // MODIFIES: this
+    // EFFECTS: rotates the current face counterclockwise
     public void rotateFaceCounterClockwise() {
         Cubelet[][] orderedCubelets = getOrderedCubelets();
         Position topLeftPos = orderedCubelets[0][0].getPos();

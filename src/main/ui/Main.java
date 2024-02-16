@@ -1,11 +1,8 @@
 package ui;
 
-import model.Cube;
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
+// main class
 public class Main {
+    // EFFECTS: stars the cube app
     public static void main(String[] args) {
         new CubeApp();
     }

@@ -1,5 +1,6 @@
 package model;
 
+// Represents a corner cubelet in the cube
 public class CornerCubelet extends Cubelet {
     public CornerCubelet(Position pos) {
         super(pos);
@@ -9,6 +10,8 @@ public class CornerCubelet extends Cubelet {
         super(c);
     }
 
+    // MODIFIES: this
+    // EFFECTS: Scrambles the colors of the cubelet by rotating it 0, 1, or 2 times clockwise
     public void scrambleColors() {
         // Clockwise XYZ: (1, -1, 1) (-1, 1, 1) (1, 1, -1) (-1, -1, -1)
         // Clockwise XZY: (-1, -1, 1), (1, 1, 1), (1, -1, -1), (-1, 1, -1)
@@ -36,6 +39,7 @@ public class CornerCubelet extends Cubelet {
         }
     }
 
+    // EFFECTS: returns the number of turns needed to make the up or down color on the cubelet be on the up or down face
     public int getClockwiseTurns() {
         boolean xyz = ((getPos().getX() == 1) ^ (getPos().getY() == 1)) == (getPos().getZ() == 1);
         if (xyz) {
