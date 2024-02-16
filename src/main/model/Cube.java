@@ -175,35 +175,17 @@ public class Cube {
     // REQUIRES: pos.getX(), pos.getY(), and pos.getZ() are all one of -1, 0, and 1.
     // EFFECTS: return Cubelet at a given position
     private Cubelet getCubeletAtPos(Position pos) {
-        for (Cubelet c : cornerCubelets) {
-            if (c.getPos().equals(pos)) {
-                return c;
-            }
-        }
-        for (Cubelet c : edgeCubelets) {
-            if (c.getPos().equals(pos)) {
-                return c;
-            }
-        }
-        for (Cubelet c : centerCubelets) {
-            if (c.getPos().equals(pos)) {
-                return c;
-            }
-        }
-        return null;
+        List<Cubelet> allCubelets = new ArrayList<>();
+        allCubelets.addAll(cornerCubelets);
+        allCubelets.addAll(edgeCubelets);
+        return allCubelets.stream().filter(c -> c.getPos().equals(pos)).findFirst().orElse(null);
     }
 
     // REQUIRES: orientation is one of U, L, F, R, B, or D
     // EFFECTS: returns face at given orientation
     public Face getFace(String orientation) {
-        CenterCubelet center = null;
-
-        for (CenterCubelet c : centerCubelets) {
-            if (c.isInFace(orientation)) {
-                center = c;
-                break;
-            }
-        }
+        CenterCubelet center = centerCubelets.stream().filter(c -> c.isInFace(orientation))
+                .findFirst().orElse(null);
 
         Face face = new Face(orientation, center);
 
