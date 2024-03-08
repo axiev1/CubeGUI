@@ -119,7 +119,10 @@ class CubeletTest {
         center2.setPos(new Position(1, 1, -1));
         assertFalse(center.equals(center2));
 
-        center2 = new Cubelet(new Position(1, -1, 1));
+        center2 = new Cubelet(new Position(0, 0, -1));
+        center2.setColorX(center.getColorX());
+        center2.setColorY(center.getColorY());
+        center2.setColorZ(center.getColorZ());
         center2.setPos(center.getPos());
         assertFalse(center.equals(center2));
     }
