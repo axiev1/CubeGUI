@@ -19,3 +19,5 @@ application to solve it for me
 - Playback the solving process of the Cube
 - Let the user create a cube
 - Be able to check whether a cube is in a solvable state
+- Be able to choose whether to save the state of the entire cube on exit
+- Be able to choose whether to reload a saved state on application start

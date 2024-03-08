@@ -1,7 +1,13 @@
 package model;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import persistence.Writable;
+
+import java.util.Objects;
+
 // Represents a cubelet, one of the smaller cubes that make up the Rubik's cube
-public class Cubelet {
+public class Cubelet implements Writable {
     private String colorX;
     private String colorY;
     private String colorZ;
@@ -31,9 +37,9 @@ public class Cubelet {
         String[] colorsY = new String[] {"G", null, "B"};
         String[] colorsZ = new String[] {"Y", null, "W"};
 
-        this.colorX = colorsX[targetPos.getX() + 1];
-        this.colorY = colorsY[targetPos.getY() + 1];
-        this.colorZ = colorsZ[targetPos.getZ() + 1];
+        setColorX(colorsX[targetPos.getX() + 1]);
+        setColorY(colorsY[targetPos.getY() + 1]);
+        setColorZ(colorsZ[targetPos.getZ() + 1]);
     }
 
     // REQUIRES: face is one of U, L, F, R, B, D
@@ -95,5 +101,24 @@ public class Cubelet {
 
     public Position getTargetPos() {
         return targetPos;
+    }
+
+    @Override
+    public JSONObject toJson() {
+        JSONObject jsonObject = new JSONObject();
+
+        jsonObject.put("targetPos", targetPos.toJson());
+        jsonObject.put("currentPos", currentPos.toJson());
+        jsonObject.put("colorX", colorX);
+        jsonObject.put("colorY", colorY);
+        jsonObject.put("colorZ", colorZ);
+
+        return jsonObject;
+    }
+
+    public boolean equals(Cubelet c) {
+        return Objects.equals(colorX, c.getColorX()) && Objects.equals(colorY, c.getColorY())
+                && Objects.equals(colorZ, c.getColorZ()) && currentPos.equals(c.getPos())
+                && targetPos.equals(c.getTargetPos());
     }
 }

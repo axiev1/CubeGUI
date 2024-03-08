@@ -2,11 +2,15 @@ package ui;
 
 import model.Cube;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import persistence.Writable;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
 // Cube handler class to control the cube
-public class CubeHandler {
+public class CubeHandler implements Writable {
     private Cube cube;
     private ArrayList<Cube> savedCubes;
 
@@ -24,6 +28,26 @@ public class CubeHandler {
         for (String turn : turns) {
             parseTurn(turn);
         }
+    }
+
+    // MODIFIES: this
+    // EFFECTS: sets the current cube
+    public void setCube(Cube cube) {
+        this.cube = cube;
+    }
+
+    public Cube getCube() {
+        return cube;
+    }
+
+    public ArrayList<Cube> getSavedCubes() {
+        return savedCubes;
+    }
+
+    // MODIFIES: this
+    // EFFECTS: sets the saved cubes
+    public void setSavedCubes(ArrayList<Cube> savedCubes) {
+        this.savedCubes = savedCubes;
     }
 
     // MODIFIES: this
@@ -52,7 +76,7 @@ public class CubeHandler {
     // MODIFIES: this
     // EFFECTS: resets the cube to the solved state
     public void reset() {
-        cube = new Cube();
+        setCube(new Cube());
     }
 
     // MODIFIES: this
@@ -66,7 +90,7 @@ public class CubeHandler {
     // MODIFIES: this
     // EFFECTS: loads a cube state from the saved states at index
     public void loadCube(int index) {
-        cube = savedCubes.get(index - 1);
+        setCube(savedCubes.get(index - 1));
         print();
     }
 
@@ -136,5 +160,23 @@ public class CubeHandler {
         System.out.println(dashSeparator);
         System.out.println(row2);
         System.out.println(dashSeparator);
+    }
+
+    @Override
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("cube", cube.toJson());
+        json.put("savedCubes", savedCubesToJson());
+        return json;
+    }
+
+    private JSONArray savedCubesToJson() {
+        JSONArray jsonArray = new JSONArray();
+
+        for (Cube c : savedCubes) {
+            jsonArray.put(c.toJson());
+        }
+
+        return jsonArray;
     }
 }

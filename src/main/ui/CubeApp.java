@@ -1,5 +1,12 @@
 package ui;
 
+import persistence.JsonReader;
+import persistence.JsonWriter;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -8,11 +15,16 @@ import java.util.regex.Pattern;
 public class CubeApp {
     private CubeHandler cubeHandler;
     private Scanner scan;
+    private static final String JSON_STORE = "./data/CubeHandler.json";
+    private JsonWriter jsonWriter;
+    private JsonReader jsonReader;
 
     // EFFECTS: starts the application
     public CubeApp() {
         cubeHandler = new CubeHandler();
         scan = new Scanner(System.in);
+        jsonWriter = new JsonWriter(JSON_STORE);
+        jsonReader = new JsonReader(JSON_STORE);
         runApp();
     }
 
@@ -20,6 +32,8 @@ public class CubeApp {
     private void runApp() {
         boolean run = true;
         String command;
+
+        checkLoad();
 
         cubeHandler.print();
         while (run) {
@@ -31,6 +45,39 @@ public class CubeApp {
             } else {
                 processCommand(command);
             }
+        }
+
+        checkSave();
+    }
+
+    private void checkLoad() {
+        File save = new File(JSON_STORE);
+        if (!save.exists()) {
+            return;
+        }
+
+        String command;
+
+        System.out.println("Would you like to load the previous save? [\"y\"/\"n\"]");
+        command = scan.nextLine();
+
+        if (command.equalsIgnoreCase("y")) {
+            loadCubeHandler();
+        } else {
+            return;
+        }
+    }
+
+    private void checkSave() {
+        String command;
+
+        System.out.println("Would you like to save? [\"y\"/\"n\"]");
+        command = scan.nextLine();
+
+        if (command.equalsIgnoreCase("y")) {
+            saveCubeHandler();
+        } else {
+            return;
         }
     }
 
@@ -82,5 +129,28 @@ public class CubeApp {
         System.out.println("To load a saved cube, type \"load (index here)\"");
         System.out.println("To reset the cube, type \"reset\"");
         System.out.println("To exit, type \"exit\"");
+    }
+
+    // EFFECTS: saves the cube handler to file
+    private void saveCubeHandler() {
+        try {
+            jsonWriter.open();
+            jsonWriter.write(cubeHandler);
+            jsonWriter.close();
+            System.out.println("Saved to " + JSON_STORE);
+        } catch (FileNotFoundException e) {
+            System.out.println("Unable to write to file: " + JSON_STORE);
+        }
+    }
+
+    // MODIFIES: this
+    // EFFECTS: loads cube handler from file
+    private void loadCubeHandler() {
+        try {
+            cubeHandler = jsonReader.read();
+            System.out.println("Loaded from " + JSON_STORE);
+        } catch (IOException e) {
+            System.out.println("Unable to read from file: " + JSON_STORE);
+        }
     }
 }

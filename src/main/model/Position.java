@@ -1,7 +1,11 @@
 package model;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import persistence.Writable;
+
 // Represents a position of a cubelet, with an x, y, and z coordinate relative to the middle of the cube
-public class Position {
+public class Position implements Writable {
     private int posX;
     private int posY;
     private int posZ;
@@ -54,5 +58,16 @@ public class Position {
     // EFFECTS: returns true if current position is equivalent to the given position
     public boolean equals(Position pos2) {
         return (posX == pos2.getX() && posY == pos2.getY() && posZ == pos2.getZ());
+    }
+
+    @Override
+    public JSONObject toJson() {
+        JSONObject jsonObject = new JSONObject();
+
+        jsonObject.put("posX", posX);
+        jsonObject.put("posY", posY);
+        jsonObject.put("posZ", posZ);
+
+        return jsonObject;
     }
 }

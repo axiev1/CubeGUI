@@ -1,10 +1,15 @@
 package model;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import persistence.Writable;
+
 import java.sql.Array;
 import java.util.*;
 
+
 // represents a Rubik's cube
-public class Cube {
+public class Cube implements Writable {
     private LinkedList<Cubelet> centerCubelets;
     private LinkedList<EdgeCubelet> edgeCubelets;
     private LinkedList<CornerCubelet> cornerCubelets;
@@ -33,6 +38,18 @@ public class Cube {
         for (CornerCubelet c : cube.getCornerCubelets()) {
             this.cornerCubelets.add(new CornerCubelet(c));
         }
+    }
+
+    public void addCenterCubelet(Cubelet c) {
+        this.centerCubelets.add(c);
+    }
+
+    public void addEdgeCubelet(EdgeCubelet c) {
+        this.edgeCubelets.add(c);
+    }
+
+    public void addCornerCubelet(CornerCubelet c) {
+        this.cornerCubelets.add(c);
     }
 
     public LinkedList<Cubelet> getCenterCubelets() {
@@ -215,17 +232,77 @@ public class Cube {
                     numberOfZeroVals = ((x == 0) ? 1 : 0) + ((y == 0) ? 1 : 0) + ((z == 0) ? 1 : 0);
                     switch (numberOfZeroVals) {
                         case 0:
-                            cornerCubelets.add(new CornerCubelet(new Position(x, y, z)));
+                            addCornerCubelet(new CornerCubelet(new Position(x, y, z)));
                             break;
                         case 1:
-                            edgeCubelets.add(new EdgeCubelet(new Position(x, y, z)));
+                            addEdgeCubelet(new EdgeCubelet(new Position(x, y, z)));
                             break;
                         case 2:
-                            centerCubelets.add(new Cubelet(new Position(x, y, z)));
+                            addCenterCubelet(new Cubelet(new Position(x, y, z)));
                             break;
                     }
                 }
             }
         }
+    }
+
+    @Override
+    public JSONObject toJson() {
+        JSONObject jsonObject = new JSONObject();
+
+        jsonObject.put("centerCubelets", centerCubeletsToJson());
+        jsonObject.put("edgeCubelets", edgeCubeletsToJson());
+        jsonObject.put("cornerCubelets", cornerCubeletsToJson());
+
+        return jsonObject;
+    }
+
+    private JSONArray centerCubeletsToJson() {
+        JSONArray jsonArray = new JSONArray();
+
+        for (Cubelet c : centerCubelets) {
+            jsonArray.put(c.toJson());
+        }
+
+        return jsonArray;
+    }
+
+    private JSONArray edgeCubeletsToJson() {
+        JSONArray jsonArray = new JSONArray();
+
+        for (EdgeCubelet c : edgeCubelets) {
+            jsonArray.put(c.toJson());
+        }
+
+        return jsonArray;
+    }
+
+    private JSONArray cornerCubeletsToJson() {
+        JSONArray jsonArray = new JSONArray();
+
+        for (CornerCubelet c : cornerCubelets) {
+            jsonArray.put(c.toJson());
+        }
+
+        return jsonArray;
+    }
+
+    public boolean equals(Cube cube) {
+        for (int i = 0; i < 6; i++) {
+            if (!centerCubelets.get(i).equals(cube.getCenterCubelets().get(i))) {
+                return false;
+            }
+        }
+        for (int i = 0; i < 12; i++) {
+            if (!edgeCubelets.get(i).equals(cube.getEdgeCubelets().get(i))) {
+                return false;
+            }
+        }
+        for (int i = 0; i < 8; i++) {
+            if (!cornerCubelets.get(i).equals(cube.getCornerCubelets().get(i))) {
+                return false;
+            }
+        }
+        return true;
     }
 }
