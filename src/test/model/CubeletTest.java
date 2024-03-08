@@ -98,4 +98,29 @@ class CubeletTest {
         assertEquals(corner.getColorX(), cornerCopy.getColorZ());
         assertEquals(corner.getColorZ(), cornerCopy.getColorX());
     }
+
+    @Test
+    void testEquals() {
+        Cubelet center2 = new Cubelet(center);
+        assertTrue(center.equals(center2));
+
+        center2.setColorX("random");
+        assertFalse(center.equals(center2));
+
+        center2 = new Cubelet(center);
+        center2.setColorY("random");
+        assertFalse(center.equals(center2));
+
+        center2 = new Cubelet(center);
+        center2.setColorZ("random");
+        assertFalse(center.equals(center2));
+
+        center2 = new Cubelet(center);
+        center2.setPos(new Position(1, 1, -1));
+        assertFalse(center.equals(center2));
+
+        center2 = new Cubelet(new Position(1, -1, 1));
+        center2.setPos(center.getPos());
+        assertFalse(center.equals(center2));
+    }
 }

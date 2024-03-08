@@ -5,15 +5,10 @@ import org.junit.jupiter.api.Test;
 import ui.CubeHandler;
 
 import java.io.IOException;
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
+// adapted from edx
 class JsonWriterTest {
-    //NOTE TO CPSC 210 STUDENTS: the strategy in designing tests for the JsonWriter is to
-    //write data to a file and then use the reader to read it back in and check that we
-    //read in a copy of what was written out.
-
     @Test
     void testWriterInvalidFile() {
         try {
@@ -27,7 +22,7 @@ class JsonWriterTest {
     }
 
     @Test
-    void testWriterEmptyWorkroom() {
+    void testWriterDefaultCubeHandler() {
         try {
             CubeHandler ch = new CubeHandler();
             JsonWriter writer = new JsonWriter("./data/testWriterDefault.json");
@@ -45,7 +40,7 @@ class JsonWriterTest {
     }
 
     @Test
-    void testWriterGeneralWorkroom() {
+    void testWriterGeneralCubeHandler() {
         try {
             CubeHandler ch = new CubeHandler();
             ch.parseScramble("D2 U B2 U2 R2 D2 U2 R' L F B R' B2 U' D' F U B' F2 D' U2 R2 F2 B2 D");

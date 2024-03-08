@@ -103,6 +103,7 @@ public class Cubelet implements Writable {
         return targetPos;
     }
 
+    // EFFECTS: returns cubelet as JSONObject
     @Override
     public JSONObject toJson() {
         JSONObject jsonObject = new JSONObject();
@@ -116,6 +117,7 @@ public class Cubelet implements Writable {
         return jsonObject;
     }
 
+    // EFFECTS: return true if cubelet is equivalent to this
     public boolean equals(Cubelet c) {
         return Objects.equals(colorX, c.getColorX()) && Objects.equals(colorY, c.getColorY())
                 && Objects.equals(colorZ, c.getColorZ()) && currentPos.equals(c.getPos())

@@ -4,7 +4,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import persistence.Writable;
 
-import java.sql.Array;
 import java.util.*;
 
 
@@ -246,6 +245,7 @@ public class Cube implements Writable {
         }
     }
 
+    // EFFECTS: returns cube as JSONobject
     @Override
     public JSONObject toJson() {
         JSONObject jsonObject = new JSONObject();
@@ -257,6 +257,7 @@ public class Cube implements Writable {
         return jsonObject;
     }
 
+    // EFFECTS: returns the center cubelets as a JSONArray
     private JSONArray centerCubeletsToJson() {
         JSONArray jsonArray = new JSONArray();
 
@@ -267,6 +268,7 @@ public class Cube implements Writable {
         return jsonArray;
     }
 
+    // EFFECTS: returns the edge cubelets as a JSONArray
     private JSONArray edgeCubeletsToJson() {
         JSONArray jsonArray = new JSONArray();
 
@@ -277,6 +279,7 @@ public class Cube implements Writable {
         return jsonArray;
     }
 
+    // EFFECTS: returns the corner cubelets as a JSONArray
     private JSONArray cornerCubeletsToJson() {
         JSONArray jsonArray = new JSONArray();
 
@@ -287,6 +290,7 @@ public class Cube implements Writable {
         return jsonArray;
     }
 
+    // EFFECTS: returns true if given cube is identical to this
     public boolean equals(Cube cube) {
         for (int i = 0; i < 6; i++) {
             if (!centerCubelets.get(i).equals(cube.getCenterCubelets().get(i))) {

@@ -39,6 +39,7 @@ public class EdgeCubelet extends Cubelet {
         }
     }
 
+    // EFFECTS: returns the first color of the cubelet
     private String getColor1() {
         String color1;
         if (getTargetPos().getX() == 0) {
@@ -51,6 +52,7 @@ public class EdgeCubelet extends Cubelet {
         return color1;
     }
 
+    // EFFECTS: returns the second color of the cubelet
     private String getColor2() {
         String color2;
         if (getTargetPos().getX() == 0) {

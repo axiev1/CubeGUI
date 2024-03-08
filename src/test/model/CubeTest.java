@@ -239,5 +239,28 @@ class CubeTest {
         }
     }
 
+    @Test
+    void testEquals() {
+        Cube cube2 = new Cube();
+        assertTrue(cube.equals(cube2));
 
+        cube2.getCenterCubelets().set(0, new Cubelet(new Position(0, 0, -1)));
+        assertFalse(cube.equals(cube2));
+
+        cube2 = new Cube(cube);
+        cube2.getEdgeCubelets().set(0, new EdgeCubelet(new Position(-1, 0, -1)));
+        assertFalse(cube.equals(cube2));
+
+        cube2 = new Cube(cube);
+        cube2.getCornerCubelets().set(0, new CornerCubelet(new Position(-1, 1, 1)));
+        assertFalse(cube.equals(cube2));
+
+        cube2 = new Cube(cube);
+        cube2.getCornerCubelets().get(0).setColorZ("incorrect");
+        assertFalse(cube.equals(cube2));
+
+        cube.scramble();
+        cube2 = new Cube(cube);
+        assertTrue(cube.equals(cube2));
+    }
 }

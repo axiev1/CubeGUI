@@ -60,6 +60,7 @@ public class Position implements Writable {
         return (posX == pos2.getX() && posY == pos2.getY() && posZ == pos2.getZ());
     }
 
+    // EFFECTS: returns position as JSONObject
     @Override
     public JSONObject toJson() {
         JSONObject jsonObject = new JSONObject();

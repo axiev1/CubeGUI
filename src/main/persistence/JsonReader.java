@@ -17,7 +17,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.stream.Stream;
 
-// Represents a reader that reads workroom from JSON data stored in file (adapted from edx)
+// Represents a reader that reads cube handler from JSON data stored in file (adapted from edx)
 public class JsonReader {
     private String source;
 
@@ -70,7 +70,6 @@ public class JsonReader {
         ch.setSavedCubes(savedCubes);
     }
 
-    // MODIFIES: wr
     // EFFECTS: parses cube from JSON object and returns it
     private Cube parseCube(JSONObject jsonObject) {
         Cube cube = new Cube();
@@ -80,6 +79,8 @@ public class JsonReader {
         return cube;
     }
 
+    // MODIFIES: cube
+    // EFFECTS: adds center cubelets from JSON object to cube handler
     private void addCenterCubelets(Cube cube, JSONObject jsonObject) {
         JSONArray jsonArray = jsonObject.getJSONArray("centerCubelets");
 
@@ -89,6 +90,8 @@ public class JsonReader {
         }
     }
 
+    // MODIFIES: cube
+    // EFFECTS: adds a center cubelet from JSONObject to cube
     private void addCenterCubelet(Cube cube, JSONObject jsonObject) {
         Position targetPos = parsePos((JSONObject) jsonObject.get("targetPos"));
 
@@ -102,6 +105,8 @@ public class JsonReader {
         cube.addCenterCubelet(centerCubelet);
     }
 
+    // MODIFIES: cube
+    // EFFECTS: adds edge cubelets from JSON object to cube handler
     private void addEdgeCubelets(Cube cube, JSONObject jsonObject) {
         JSONArray jsonArray = jsonObject.getJSONArray("edgeCubelets");
 
@@ -111,6 +116,8 @@ public class JsonReader {
         }
     }
 
+    // MODIFIES: cube
+    // EFFECTS: adds an edge cubelet from JSONObject to cube
     private void addEdgeCubelet(Cube cube, JSONObject jsonObject) {
         Position targetPos = parsePos((JSONObject) jsonObject.get("targetPos"));
 
@@ -124,6 +131,8 @@ public class JsonReader {
         cube.addEdgeCubelet(edgeCubelet);
     }
 
+    // MODIFIES: cube
+    // EFFECTS: adds corner cubelets from JSON object to cube handler
     private void addCornerCubelets(Cube cube, JSONObject jsonObject) {
         JSONArray jsonArray = jsonObject.getJSONArray("cornerCubelets");
 
@@ -133,6 +142,8 @@ public class JsonReader {
         }
     }
 
+    // MODIFIES: cube
+    // EFFECTS: adds a corner cubelet from JSONObject to cube
     private void addCornerCubelet(Cube cube, JSONObject jsonObject) {
         Position targetPos = parsePos((JSONObject) jsonObject.get("targetPos"));
 
@@ -146,6 +157,7 @@ public class JsonReader {
         cube.addCornerCubelet(cornerCubelet);
     }
 
+    // EFFECTS: parses a position object from jsonObject and returns it
     private Position parsePos(JSONObject jsonObject) {
         int x = jsonObject.getInt("posX");
         int y = jsonObject.getInt("posY");
@@ -155,6 +167,7 @@ public class JsonReader {
         return pos;
     }
 
+    // EFFECTS: parses a color from jsonObject and returns it
     private String parseColor(String key, JSONObject jsonObject) {
         if (!jsonObject.has(key)) {
             return null;
