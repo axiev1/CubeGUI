@@ -3,6 +3,7 @@ package model;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import persistence.Writable;
+import ui.CubeletModel;
 
 import java.util.Objects;
 
@@ -13,6 +14,7 @@ public class Cubelet implements Writable {
     private String colorZ;
     private Position currentPos;
     private Position targetPos;
+    private CubeletModel cubeletModel;
 
     // EFFECTS: Constructs new cubelet with a position and target position
     public Cubelet(Position pos) {
@@ -40,6 +42,8 @@ public class Cubelet implements Writable {
         setColorX(colorsX[targetPos.getX() + 1]);
         setColorY(colorsY[targetPos.getY() + 1]);
         setColorZ(colorsZ[targetPos.getZ() + 1]);
+
+        cubeletModel = new CubeletModel(colorX, colorY, colorZ, currentPos);
     }
 
     // REQUIRES: face is one of U, L, F, R, B, D
@@ -97,10 +101,15 @@ public class Cubelet implements Writable {
             setColorX(getColorZ());
             setColorZ(colorX);
         }
+        cubeletModel.rotate(orientation);
     }
 
     public Position getTargetPos() {
         return targetPos;
+    }
+
+    public CubeletModel getCubeletModel() {
+        return cubeletModel;
     }
 
     // EFFECTS: returns cubelet as JSONObject
