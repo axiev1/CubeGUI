@@ -28,5 +28,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="json-20210307" level="project" />
+    <orderEntry type="library" name="lwjgl" level="project" />
+    <orderEntry type="library" name="lwjgl (2)" level="project" />
   </component>
 </module>
