@@ -113,14 +113,14 @@ public class CubeletModel {
     }
 
     public void rotate(String orientation, boolean clockwise) {
-        GUI3D.setAnimating(true);
+        Gui3D.setAnimating(true);
 
         Timeline timeline = new Timeline(new KeyFrame(Duration.millis(6),
                 e -> performRotation(orientation, clockwise)));
         timeline.setCycleCount((int) rotationRate);
         timeline.playFromStart();
 
-        timeline.setOnFinished(e -> GUI3D.setAnimating(false));
+        timeline.setOnFinished(e -> Gui3D.setAnimating(false));
     }
 
     private void performRotation(String orientation, boolean clockwise) {
