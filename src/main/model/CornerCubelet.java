@@ -37,6 +37,8 @@ public class CornerCubelet extends Cubelet {
             setColorZ(scramble[(shift + 1) % 3]);
             setColorY(scramble[(shift + 2) % 3]);
         }
+
+        getCubeletModel().createGroup(getColorX(), getColorY(), getColorZ(), getPos());
     }
 
     // EFFECTS: returns the number of turns needed to make the up or down color on the cubelet be on the up or down face

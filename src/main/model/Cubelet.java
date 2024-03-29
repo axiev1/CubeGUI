@@ -30,6 +30,8 @@ public class Cubelet implements Writable {
         this.colorZ = c.getColorZ();
         this.currentPos = new Position(c.getPos());
         this.targetPos = new Position(c.getTargetPos());
+
+        cubeletModel = new CubeletModel(colorX, colorY, colorZ, currentPos);
     }
 
     // MODIFIES: this
@@ -101,7 +103,9 @@ public class Cubelet implements Writable {
             setColorX(getColorZ());
             setColorZ(colorX);
         }
-        cubeletModel.rotate(orientation);
+        if (cubeletModel != null) {
+            cubeletModel.rotate(orientation);
+        }
     }
 
     public Position getTargetPos() {

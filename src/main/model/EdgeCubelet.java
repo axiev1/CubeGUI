@@ -37,6 +37,8 @@ public class EdgeCubelet extends Cubelet {
             setColorY(color2);
             setColorZ(null);
         }
+
+        getCubeletModel().createGroup(getColorX(), getColorY(), getColorZ(), getPos());
     }
 
     // EFFECTS: returns the first color of the cubelet

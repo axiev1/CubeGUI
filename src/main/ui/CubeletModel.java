@@ -19,56 +19,76 @@ public class CubeletModel {
     private static final int CUBELET_SIZE = 50;
     private static final int STICKER_SIZE = CUBELET_SIZE - 6;
     private Group group;
+    private double cubeletCenterX;
+    private double cubeletCenterY;
+    private double cubeletCenterZ;
 
     public CubeletModel(String colorX, String colorY, String colorZ, Position pos) {
-        double cubeletCenterX = CUBELET_SIZE * pos.getX();
-        double cubeletCenterY = -1 * CUBELET_SIZE * pos.getZ();
-        double cubeletCenterZ = CUBELET_SIZE * pos.getY();
+        createGroup(colorX, colorY, colorZ, pos);
+    }
 
+    public void createGroup(String colorX, String colorY, String colorZ, Position pos) {
+        cubeletCenterX = CUBELET_SIZE * pos.getX();
+        cubeletCenterY = -1 * CUBELET_SIZE * pos.getZ();
+        cubeletCenterZ = CUBELET_SIZE * pos.getY();
+
+        group = new Group();
+        addBox();
+        if (colorX != null) {
+            addStickerX(colorX, pos.getX());
+        }
+
+        if (colorZ != null) {
+            addStickerY(colorZ, pos.getZ());
+        }
+
+        if (colorY != null) {
+            addStickerZ(colorY, pos.getY());
+        }
+    }
+
+    private void addBox() {
         Box box = new Box(CUBELET_SIZE, CUBELET_SIZE, CUBELET_SIZE);
         PhongMaterial material = new PhongMaterial();
         material.setDiffuseColor(Color.BLACK);
         box.setMaterial(material);
-
-        group = new Group();
-        group.getChildren().add(box);
-
-        if (colorX != null) {
-            Box stickerX = new Box(1, STICKER_SIZE, STICKER_SIZE);
-            PhongMaterial materialX = new PhongMaterial();
-            materialX.setDiffuseColor(getColor(colorX));
-            stickerX.setMaterial(materialX);
-            stickerX.translateXProperty().set(cubeletCenterX + 0.5 * CUBELET_SIZE * pos.getX());
-            stickerX.translateYProperty().set(cubeletCenterY);
-            stickerX.translateZProperty().set(cubeletCenterZ);
-            group.getChildren().add(stickerX);
-        }
-
-        if (colorZ != null) {
-            Box stickerY = new Box(STICKER_SIZE, 1, STICKER_SIZE);
-            PhongMaterial materialY = new PhongMaterial();
-            materialY.setDiffuseColor(getColor(colorZ));
-            stickerY.setMaterial(materialY);
-            stickerY.translateXProperty().set(cubeletCenterX);
-            stickerY.translateYProperty().set(cubeletCenterY - 0.5 * CUBELET_SIZE * pos.getZ());
-            stickerY.translateZProperty().set(cubeletCenterZ);
-            group.getChildren().add(stickerY);
-        }
-
-        if (colorY != null) {
-            Box stickerZ = new Box(STICKER_SIZE, STICKER_SIZE, 1);
-            PhongMaterial materialZ = new PhongMaterial();
-            materialZ.setDiffuseColor(getColor(colorY));
-            stickerZ.setMaterial(materialZ);
-            stickerZ.translateXProperty().set(cubeletCenterX);
-            stickerZ.translateYProperty().set(cubeletCenterY);
-            stickerZ.translateZProperty().set(cubeletCenterZ + 0.5 * CUBELET_SIZE * pos.getY());
-            group.getChildren().add(stickerZ);
-        }
-
         box.translateXProperty().set(cubeletCenterX);
         box.translateYProperty().set(cubeletCenterY);
         box.translateZProperty().set(cubeletCenterZ);
+        group.getChildren().add(box);
+    }
+
+    private void addStickerX(String color, int xpos) {
+        Box stickerX = new Box(1, STICKER_SIZE, STICKER_SIZE);
+        PhongMaterial materialX = new PhongMaterial();
+        materialX.setDiffuseColor(getColor(color));
+        stickerX.setMaterial(materialX);
+        stickerX.translateXProperty().set(cubeletCenterX + 0.5 * CUBELET_SIZE * xpos);
+        stickerX.translateYProperty().set(cubeletCenterY);
+        stickerX.translateZProperty().set(cubeletCenterZ);
+        group.getChildren().add(stickerX);
+    }
+
+    private void addStickerY(String color, int ypos) {
+        Box stickerY = new Box(STICKER_SIZE, 1, STICKER_SIZE);
+        PhongMaterial materialY = new PhongMaterial();
+        materialY.setDiffuseColor(getColor(color));
+        stickerY.setMaterial(materialY);
+        stickerY.translateXProperty().set(cubeletCenterX);
+        stickerY.translateYProperty().set(cubeletCenterY - 0.5 * CUBELET_SIZE * ypos);
+        stickerY.translateZProperty().set(cubeletCenterZ);
+        group.getChildren().add(stickerY);
+    }
+
+    private void addStickerZ(String color, int zpos) {
+        Box stickerZ = new Box(STICKER_SIZE, STICKER_SIZE, 1);
+        PhongMaterial materialZ = new PhongMaterial();
+        materialZ.setDiffuseColor(getColor(color));
+        stickerZ.setMaterial(materialZ);
+        stickerZ.translateXProperty().set(cubeletCenterX);
+        stickerZ.translateYProperty().set(cubeletCenterY);
+        stickerZ.translateZProperty().set(cubeletCenterZ + 0.5 * CUBELET_SIZE * zpos);
+        group.getChildren().add(stickerZ);
     }
 
     public Group getModel() {
@@ -103,7 +123,6 @@ public class CubeletModel {
             r = new Rotate(angle, Rotate.Z_AXIS);
         }
 
-        System.out.println(group.getTransforms().size());
         if (group.getTransforms().size() > 0) {
             group.getTransforms().setAll(r.createConcatenation(group.getTransforms().get(0)));
         } else {

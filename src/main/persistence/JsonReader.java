@@ -100,6 +100,8 @@ public class JsonReader {
         centerCubelet.setColorX(parseColor("colorX", jsonObject));
         centerCubelet.setColorY(parseColor("colorY", jsonObject));
         centerCubelet.setColorZ(parseColor("colorZ", jsonObject));
+        centerCubelet.getCubeletModel().createGroup(centerCubelet.getColorX(), centerCubelet.getColorY(),
+                centerCubelet.getColorZ(), centerCubelet.getPos());
 
         cube.getCenterCubelets().remove();
         cube.addCenterCubelet(centerCubelet);
@@ -127,6 +129,9 @@ public class JsonReader {
         edgeCubelet.setColorY(parseColor("colorY", jsonObject));
         edgeCubelet.setColorZ(parseColor("colorZ", jsonObject));
 
+        edgeCubelet.getCubeletModel().createGroup(edgeCubelet.getColorX(), edgeCubelet.getColorY(),
+                edgeCubelet.getColorZ(), edgeCubelet.getPos());
+
         cube.getEdgeCubelets().remove();
         cube.addEdgeCubelet(edgeCubelet);
     }
@@ -152,6 +157,9 @@ public class JsonReader {
         cornerCubelet.setColorX(parseColor("colorX", jsonObject));
         cornerCubelet.setColorY(parseColor("colorY", jsonObject));
         cornerCubelet.setColorZ(parseColor("colorZ", jsonObject));
+
+        cornerCubelet.getCubeletModel().createGroup(cornerCubelet.getColorX(), cornerCubelet.getColorY(),
+                cornerCubelet.getColorZ(), cornerCubelet.getPos());
 
         cube.getCornerCubelets().remove();
         cube.addCornerCubelet(cornerCubelet);

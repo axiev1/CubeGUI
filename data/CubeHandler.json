@@ -1,5 +1,2624 @@
 {
-    "savedCubes": [],
+    "savedCubes": [
+        {
+            "centerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "edgeCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "cornerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                }
+            ]
+        },
+        {
+            "centerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "edgeCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "cornerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                }
+            ]
+        },
+        {
+            "centerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "edgeCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "cornerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                }
+            ]
+        },
+        {
+            "centerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "edgeCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "cornerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                }
+            ]
+        },
+        {
+            "centerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "edgeCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "cornerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                }
+            ]
+        },
+        {
+            "centerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "edgeCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "cornerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                }
+            ]
+        },
+        {
+            "centerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "edgeCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "colorY": "G",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "colorY": "B",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "cornerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "colorY": "G",
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "colorY": "B",
+                    "colorZ": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                }
+            ]
+        }
+    ],
     "cube": {
         "centerCubelets": [
             {
