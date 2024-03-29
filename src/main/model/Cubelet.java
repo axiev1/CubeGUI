@@ -41,7 +41,7 @@ public class Cubelet implements Writable {
         this.currentPos = new Position(c.getPos());
         this.targetPos = new Position(c.getTargetPos());
         this.modelExists = c.isModelExists();
-        if (this.modelExists) {
+        if (isModelExists()) {
             cubeletModel = new CubeletModel(colorX, colorY, colorZ, currentPos);
         }
     }
@@ -57,7 +57,7 @@ public class Cubelet implements Writable {
         setColorY(colorsY[targetPos.getY() + 1]);
         setColorZ(colorsZ[targetPos.getZ() + 1]);
 
-        if (modelExists) {
+        if (isModelExists()) {
             cubeletModel = new CubeletModel(colorX, colorY, colorZ, currentPos);
         }
     }
@@ -117,7 +117,7 @@ public class Cubelet implements Writable {
             setColorX(getColorZ());
             setColorZ(colorX);
         }
-        if (cubeletModel != null) {
+        if (isModelExists()) {
             cubeletModel.rotate(orientation, clockwise);
         }
     }
@@ -128,10 +128,6 @@ public class Cubelet implements Writable {
 
     public CubeletModel getCubeletModel() {
         return cubeletModel;
-    }
-
-    public void setModelExists(boolean modelExists) {
-        this.modelExists = modelExists;
     }
 
     public boolean isModelExists() {

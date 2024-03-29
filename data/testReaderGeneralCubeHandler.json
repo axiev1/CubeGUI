@@ -1,6 +1,7 @@
 {
     "savedCubes": [
         {
+            "modelExists": false,
             "centerCubelets": [
                 {
                     "targetPos": {
@@ -401,6 +402,7 @@
             ]
         },
         {
+            "modelExists": false,
             "centerCubelets": [
                 {
                     "targetPos": {
@@ -803,6 +805,7 @@
     ],
     "modelExists": false,
     "cube": {
+        "modelExists": false,
         "centerCubelets": [
             {
                 "targetPos": {

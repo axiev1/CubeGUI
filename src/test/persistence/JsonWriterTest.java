@@ -24,7 +24,7 @@ class JsonWriterTest {
     @Test
     void testWriterDefaultCubeHandler() {
         try {
-            CubeHandler ch = new CubeHandler(true);
+            CubeHandler ch = new CubeHandler(false);
             JsonWriter writer = new JsonWriter("./data/testWriterDefault.json");
             writer.open();
             writer.write(ch);
@@ -63,6 +63,25 @@ class JsonWriterTest {
             assertTrue(ch2.getSavedCubes().get(0).equals(ch.getSavedCubes().get(0)));
             assertTrue(ch2.getSavedCubes().get(1).equals(ch.getSavedCubes().get(1)));
 
+        } catch (IOException e) {
+            fail("Exception should not have been thrown");
+        }
+    }
+
+    @Test
+    void testWriter3DCubeHandler() {
+        try {
+            CubeHandler ch = new CubeHandler(true);
+
+            JsonWriter writer = new JsonWriter("./data/testWriter3DCubeHandler.json");
+            writer.open();
+            writer.write(ch);
+            writer.close();
+
+            JsonReader reader = new JsonReader("./data/testWriter3DCubeHandler.json");
+            CubeHandler ch2 = reader.read();
+
+            assertTrue(ch2.getCube().equals(ch.getCube()));
         } catch (IOException e) {
             fail("Exception should not have been thrown");
         }

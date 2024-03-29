@@ -11,7 +11,7 @@ class CornerCubeletTest {
 
     @BeforeEach
     void runBefore() {
-        cc1 = new CornerCubelet(new Position(-1, 1, 1));
+        cc1 = new CornerCubelet(new Position(-1, 1, 1), true);
         cc2 = new CornerCubelet(new Position(1, 1, 1));
     }
 

@@ -12,8 +12,8 @@ class CubeletTest {
     @BeforeEach
     void setUp() {
         center = new Cubelet(new Position(0, 0, 1), false);
-        edge = new EdgeCubelet(new Position(-1, 0, 1), false);
-        corner = new CornerCubelet(new Position(-1, -1, 1), false);
+        edge = new EdgeCubelet(new Position(-1, 0, 1), true);
+        corner = new CornerCubelet(new Position(-1, -1, 1), true);
     }
 
     @Test
@@ -68,6 +68,10 @@ class CubeletTest {
 
     @Test
     void testRotate() {
+        center = new Cubelet(new Position(0, 0, 1), false);
+        edge = new EdgeCubelet(new Position(-1, 0, 1), false);
+        corner = new CornerCubelet(new Position(-1, -1, 1), false);
+
         Cubelet edgeCopy = new EdgeCubelet(edge);
         edgeCopy.rotate("U", true);
         assertEquals(edge.getColorX(), edgeCopy.getColorY());

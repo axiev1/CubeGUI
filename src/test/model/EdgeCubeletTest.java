@@ -7,9 +7,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class EdgeCubeletTest {
     private EdgeCubelet ec;
+    private EdgeCubelet ec2;
+
     @BeforeEach
     void runBefore() {
-        ec = new EdgeCubelet(new Position(-1, 0, 1));
+        ec = new EdgeCubelet(new Position(-1, 0, 1), false);
+        ec2 = new EdgeCubelet(new Position(-1, 0, 1), true);
     }
 
     @Test

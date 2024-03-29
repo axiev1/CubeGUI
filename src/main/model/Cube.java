@@ -14,6 +14,7 @@ public class Cube implements Writable {
     private LinkedList<CornerCubelet> cornerCubelets;
     private boolean modelExists;
 
+    // EFFECTS: Initializes a cube in the solved state
     public Cube() {
         this.centerCubelets = new LinkedList<>();
         this.edgeCubelets = new LinkedList<>();
@@ -22,7 +23,6 @@ public class Cube implements Writable {
         generateStartingPositions();
     }
 
-    // EFFECTS: Initializes a cube in the solved state
     public Cube(boolean modelExists) {
         this.centerCubelets = new LinkedList<>();
         this.edgeCubelets = new LinkedList<>();
@@ -268,6 +268,7 @@ public class Cube implements Writable {
     public JSONObject toJson() {
         JSONObject jsonObject = new JSONObject();
 
+        jsonObject.put("modelExists", isModelExists());
         jsonObject.put("centerCubelets", centerCubeletsToJson());
         jsonObject.put("edgeCubelets", edgeCubeletsToJson());
         jsonObject.put("cornerCubelets", cornerCubeletsToJson());
@@ -310,6 +311,9 @@ public class Cube implements Writable {
 
     // EFFECTS: returns true if given cube is identical to this
     public boolean equals(Cube cube) {
+        if (this.isModelExists() != cube.isModelExists()) {
+            return false;
+        }
         for (int i = 0; i < 6; i++) {
             if (!centerCubelets.get(i).equals(cube.getCenterCubelets().get(i))) {
                 return false;

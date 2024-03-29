@@ -316,7 +316,7 @@ public class Gui3D extends JFrame {
         Gui3D.animating = animating;
     }
 
-    public static void main(String[] args) {
+    public static void start(String[] args) {
         jsonWriter = new JsonWriter(JSON_STORE);
         jsonReader = new JsonReader(JSON_STORE);
 

@@ -4,6 +4,7 @@ package ui;
 public class Main {
     // EFFECTS: stars the cube app
     public static void main(String[] args) {
-        new CubeApp();
+        Gui3D.start(args);
+        // new CubeApp();
     }
 }

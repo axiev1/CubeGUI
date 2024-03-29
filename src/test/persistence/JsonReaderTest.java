@@ -37,7 +37,7 @@ class JsonReaderTest {
     }
 
     @Test
-    void testReaderGeneralWorkRoom() {
+    void testReaderGeneralCubeHandler() {
         JsonReader reader = new JsonReader("./data/testReaderGeneralCubeHandler.json");
         try {
             CubeHandler ch = reader.read();
@@ -55,6 +55,20 @@ class JsonReaderTest {
             assertTrue(ch2.getSavedCubes().get(0).equals(ch.getSavedCubes().get(0)));
             assertTrue(ch2.getSavedCubes().get(1).equals(ch.getSavedCubes().get(1)));
 
+        } catch (IOException e) {
+            fail("Couldn't read from file");
+        }
+    }
+
+    @Test
+    void testReader3DCubeHandler() {
+        JsonReader reader = new JsonReader("./data/testReader3DCubeHandler.json");
+        try {
+            CubeHandler ch = reader.read();
+
+            CubeHandler ch2 = new CubeHandler(true);
+
+            assertTrue(ch2.getCube().equals(ch.getCube()));
         } catch (IOException e) {
             fail("Couldn't read from file");
         }

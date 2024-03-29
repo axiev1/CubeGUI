@@ -1,7 +1,8 @@
 {
     "savedCubes": [],
-    "modelExists": true,
+    "modelExists": false,
     "cube": {
+        "modelExists": false,
         "centerCubelets": [
             {
                 "targetPos": {
@@ -9,7 +10,7 @@
                     "posY": 0,
                     "posZ": 0
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorX": "O",
                 "currentPos": {
                     "posX": -1,
@@ -23,7 +24,7 @@
                     "posY": -1,
                     "posZ": 0
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "G",
                 "currentPos": {
                     "posX": 0,
@@ -37,7 +38,7 @@
                     "posY": 0,
                     "posZ": -1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorZ": "Y",
                 "currentPos": {
                     "posX": 0,
@@ -51,7 +52,7 @@
                     "posY": 0,
                     "posZ": 1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorZ": "W",
                 "currentPos": {
                     "posX": 0,
@@ -65,7 +66,7 @@
                     "posY": 1,
                     "posZ": 0
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "B",
                 "currentPos": {
                     "posX": 0,
@@ -79,7 +80,7 @@
                     "posY": 0,
                     "posZ": 0
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorX": "R",
                 "currentPos": {
                     "posX": 1,
@@ -95,7 +96,7 @@
                     "posY": -1,
                     "posZ": 0
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "G",
                 "colorX": "O",
                 "currentPos": {
@@ -110,7 +111,7 @@
                     "posY": 0,
                     "posZ": -1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorZ": "Y",
                 "colorX": "O",
                 "currentPos": {
@@ -125,7 +126,7 @@
                     "posY": 0,
                     "posZ": 1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorZ": "W",
                 "colorX": "O",
                 "currentPos": {
@@ -140,7 +141,7 @@
                     "posY": 1,
                     "posZ": 0
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "B",
                 "colorX": "O",
                 "currentPos": {
@@ -155,7 +156,7 @@
                     "posY": -1,
                     "posZ": -1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "G",
                 "colorZ": "Y",
                 "currentPos": {
@@ -170,7 +171,7 @@
                     "posY": -1,
                     "posZ": 1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "G",
                 "colorZ": "W",
                 "currentPos": {
@@ -185,7 +186,7 @@
                     "posY": 1,
                     "posZ": -1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "B",
                 "colorZ": "Y",
                 "currentPos": {
@@ -200,7 +201,7 @@
                     "posY": 1,
                     "posZ": 1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "B",
                 "colorZ": "W",
                 "currentPos": {
@@ -215,7 +216,7 @@
                     "posY": -1,
                     "posZ": 0
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "G",
                 "colorX": "R",
                 "currentPos": {
@@ -230,7 +231,7 @@
                     "posY": 0,
                     "posZ": -1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorZ": "Y",
                 "colorX": "R",
                 "currentPos": {
@@ -245,7 +246,7 @@
                     "posY": 0,
                     "posZ": 1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorZ": "W",
                 "colorX": "R",
                 "currentPos": {
@@ -260,7 +261,7 @@
                     "posY": 1,
                     "posZ": 0
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "B",
                 "colorX": "R",
                 "currentPos": {
@@ -277,7 +278,7 @@
                     "posY": -1,
                     "posZ": -1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "G",
                 "colorZ": "Y",
                 "colorX": "O",
@@ -293,7 +294,7 @@
                     "posY": -1,
                     "posZ": 1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "G",
                 "colorZ": "W",
                 "colorX": "O",
@@ -309,7 +310,7 @@
                     "posY": 1,
                     "posZ": -1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "B",
                 "colorZ": "Y",
                 "colorX": "O",
@@ -325,7 +326,7 @@
                     "posY": 1,
                     "posZ": 1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "B",
                 "colorZ": "W",
                 "colorX": "O",
@@ -341,7 +342,7 @@
                     "posY": -1,
                     "posZ": -1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "G",
                 "colorZ": "Y",
                 "colorX": "R",
@@ -357,7 +358,7 @@
                     "posY": -1,
                     "posZ": 1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "G",
                 "colorZ": "W",
                 "colorX": "R",
@@ -373,7 +374,7 @@
                     "posY": 1,
                     "posZ": -1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "B",
                 "colorZ": "Y",
                 "colorX": "R",
@@ -389,7 +390,7 @@
                     "posY": 1,
                     "posZ": 1
                 },
-                "modelExists": true,
+                "modelExists": false,
                 "colorY": "B",
                 "colorZ": "W",
                 "colorX": "R",

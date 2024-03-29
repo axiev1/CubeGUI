@@ -72,7 +72,7 @@ public class JsonReader {
 
     // EFFECTS: parses cube from JSON object and returns it
     private Cube parseCube(JSONObject jsonObject) {
-        Cube cube = new Cube();
+        Cube cube = new Cube(jsonObject.getBoolean("modelExists"));
         addCenterCubelets(cube, jsonObject);
         addEdgeCubelets(cube, jsonObject);
         addCornerCubelets(cube, jsonObject);
