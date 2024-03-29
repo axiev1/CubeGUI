@@ -1,6 +1,5 @@
 package model;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 import persistence.Writable;
 import ui.CubeletModel;
@@ -28,7 +27,7 @@ public class Cubelet implements Writable {
     // EFFECTS: Constructs new cubelet with a position and target position
     public Cubelet(Position pos, boolean modelExists) {
         this.currentPos = pos;
-        this.targetPos = (new Position(pos));
+        this.targetPos = new Position(pos);
         this.modelExists = modelExists;
         setColors();
     }

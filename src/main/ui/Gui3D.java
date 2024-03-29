@@ -24,7 +24,7 @@ import java.io.IOException;
 
 // 3D GUI with JavaFX and Swing.
 // Learned JavaFX syntax from https://www.youtube.com/playlist?list=PLhs1urmduZ295Ryetga7CNOqDymN_rhB_
-// Learned Swing syntax from
+// Learned Swing syntax from https://docs.oracle.com/javase/tutorial/uiswing/
 public class Gui3D extends JFrame {
     private static final int WIDTH = 1480;
     private static final int HEIGHT = 850;
@@ -42,6 +42,8 @@ public class Gui3D extends JFrame {
     private static boolean animating;
     private static boolean shiftPressed;
 
+    // MODIFIES: this
+    // EFFECTS: shows GUI interface
     private static void initAndShowGUI() {
         JFrame frame = new JFrame("Rubik's Cube");
         final JFXPanel panel = new JFXPanel();
@@ -64,6 +66,8 @@ public class Gui3D extends JFrame {
         });
     }
 
+    // MODIFIES: this
+    // EFFECTS: moves cube to center on window resize
     private static void initWindowResize(JFrame frame) {
         frame.addComponentListener(new ComponentAdapter() {
             @Override
@@ -75,6 +79,8 @@ public class Gui3D extends JFrame {
         });
     }
 
+    // MODIFIES: this
+    // EFFECTS: prompt to save game on window close
     private static void initWindowClose(JFrame frame) {
         frame.addWindowListener(new WindowAdapter() {
             @Override
@@ -92,6 +98,8 @@ public class Gui3D extends JFrame {
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
 
+    // MODIFIES: this
+    // EFFECTS: starts javaFX 3D model
     private static Scene initJavaFX() {
         group = new Group();
 
@@ -115,6 +123,8 @@ public class Gui3D extends JFrame {
         return scene;
     }
 
+    // MODIFIES: this
+    // EFFECTS: creates the 3D model of the cube
     private static void createNewCubeModel() {
         group.getChildren().clear();
         for (Cubelet c : cubeHandler.getCube().getCenterCubelets()) {
@@ -128,6 +138,8 @@ public class Gui3D extends JFrame {
         }
     }
 
+    // MODIFIES: this
+    // EFFECTS: enables the user to rotate the cube with the mouse
     private static void initMouseControl(Scene scene) {
         Rotate xrotate;
         Rotate yrotate;
@@ -151,6 +163,8 @@ public class Gui3D extends JFrame {
         });
     }
 
+    // MODIFIES: this
+    // EFFECTS: enables the user to make moves with the keyboard
     private static void initKeyboardControl(Scene scene) {
         scene.addEventHandler(KeyEvent.KEY_PRESSED, e -> {
             boolean turn = e.getCode().equals(KeyCode.U) || e.getCode().equals(KeyCode.L)
@@ -179,12 +193,16 @@ public class Gui3D extends JFrame {
         });
     }
 
+    // MODIFIES: this
+    // EFFECTS: creates the buttons
     private static void createButtons(JFXPanel panel) {
         createScrambleButton(panel);
         createResetButton(panel);
         createSaveAndLoadButton(panel);
     }
 
+    // MODIFIES: this
+    // EFFECTS: creates the button to scramble
     private static void createScrambleButton(JFXPanel panel) {
         JButton button = new JButton("Scramble");
         button.setBounds(100, 100, 100, 50);
@@ -204,6 +222,8 @@ public class Gui3D extends JFrame {
         });
     }
 
+    // MODIFIES: this
+    // EFFECTS: creates the button to reset the cube
     private static void createResetButton(JFXPanel panel) {
         JButton button = new JButton("Reset");
         button.setBounds(100, 200, 100, 50);
@@ -223,6 +243,8 @@ public class Gui3D extends JFrame {
         });
     }
 
+    // MODIFIES: this
+    // REQUIRES: creates the button to save and load the cube
     private static void createSaveAndLoadButton(JFXPanel panel) {
         JButton button = new JButton("Save");
         button.setBounds(100, 300, 100, 50);
@@ -251,6 +273,8 @@ public class Gui3D extends JFrame {
         });
     }
 
+    // MODIFIES: this
+    // EFFECTS: creates the button to load the cube
     private static void createLoadButton(JFXPanel panel, JComboBox comboBox) {
         JButton button = new JButton("Load");
         button.setBounds(100, 500, 100, 50);
@@ -272,6 +296,7 @@ public class Gui3D extends JFrame {
         });
     }
 
+    // EFFECTS: saves cubehandler to JSON file
     private static void saveCubeHandler() {
         try {
             jsonWriter.open();
@@ -283,6 +308,7 @@ public class Gui3D extends JFrame {
         }
     }
 
+    // EFFECTS: check if JSON save exists and prompts the user if they want to restore it
     private static void checkLoad() {
         File save = new File(JSON_STORE);
         if (!save.exists()) {
@@ -316,6 +342,8 @@ public class Gui3D extends JFrame {
         Gui3D.animating = animating;
     }
 
+    // MODIFIES: this
+    // EFFECTS: starts the GUI
     public static void start(String[] args) {
         jsonWriter = new JsonWriter(JSON_STORE);
         jsonReader = new JsonReader(JSON_STORE);

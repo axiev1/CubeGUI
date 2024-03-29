@@ -164,6 +164,7 @@ public class CubeHandler implements Writable {
         System.out.println(dashSeparator);
     }
 
+    // EFFECTS: Converts cube handler to json
     @Override
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
@@ -173,6 +174,7 @@ public class CubeHandler implements Writable {
         return json;
     }
 
+    // EFFECTS: converts saved cubes to json
     private JSONArray savedCubesToJson() {
         JSONArray jsonArray = new JSONArray();
 

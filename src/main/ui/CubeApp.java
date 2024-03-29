@@ -50,6 +50,8 @@ public class CubeApp {
         checkSave();
     }
 
+    // MODIFIES: this
+    // EFFECTS: checks if there is a previous save and loads if the user agrees
     private void checkLoad() {
         File save = new File(JSON_STORE);
         if (!save.exists()) {
@@ -63,11 +65,11 @@ public class CubeApp {
 
         if (command.equalsIgnoreCase("y")) {
             loadCubeHandler();
-        } else {
-            return;
         }
     }
 
+    // MODIFIES: this
+    // EFFECTS: loads previous save
     private void checkSave() {
         String command;
 
@@ -76,8 +78,6 @@ public class CubeApp {
 
         if (command.equalsIgnoreCase("y")) {
             saveCubeHandler();
-        } else {
-            return;
         }
     }
 

@@ -1,0 +1,1208 @@
+{
+    "savedCubes": [
+        {
+            "modelExists": false,
+            "centerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorY": "G",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorY": "B",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "edgeCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorY": "O",
+                    "colorX": "G",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorY": "Y",
+                    "colorZ": "O",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorY": "O",
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorZ": "O",
+                    "colorX": "B",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorZ": "Y",
+                    "colorX": "G",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorY": "W",
+                    "colorX": "G",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorZ": "B",
+                    "colorX": "Y",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorY": "W",
+                    "colorZ": "B",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorZ": "R",
+                    "colorX": "G",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorY": "Y",
+                    "colorZ": "R",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorY": "W",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorY": "R",
+                    "colorX": "B",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "cornerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorY": "G",
+                    "colorZ": "O",
+                    "colorX": "Y",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorY": "G",
+                    "colorZ": "O",
+                    "colorX": "W",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorY": "B",
+                    "colorZ": "Y",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorY": "O",
+                    "colorZ": "W",
+                    "colorX": "B",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorY": "G",
+                    "colorZ": "R",
+                    "colorX": "Y",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorY": "W",
+                    "colorZ": "R",
+                    "colorX": "G",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorY": "R",
+                    "colorZ": "Y",
+                    "colorX": "B",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorY": "R",
+                    "colorZ": "W",
+                    "colorX": "B",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                }
+            ]
+        },
+        {
+            "modelExists": false,
+            "centerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorY": "G",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorZ": "W",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorY": "B",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "edgeCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorZ": "O",
+                    "colorX": "G",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorY": "O",
+                    "colorZ": "Y",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorZ": "O",
+                    "colorX": "W",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorY": "O",
+                    "colorZ": "B",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorY": "Y",
+                    "colorZ": "G",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorY": "G",
+                    "colorX": "W",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorY": "Y",
+                    "colorX": "B",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorY": "W",
+                    "colorZ": "B",
+                    "currentPos": {
+                        "posX": 0,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorZ": "R",
+                    "colorX": "G",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 0,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorY": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorZ": "R",
+                    "colorX": "W",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 0,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 0
+                    },
+                    "modelExists": false,
+                    "colorY": "R",
+                    "colorX": "B",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 0
+                    }
+                }
+            ],
+            "cornerCubelets": [
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorY": "O",
+                    "colorZ": "Y",
+                    "colorX": "G",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorY": "W",
+                    "colorZ": "G",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorY": "B",
+                    "colorZ": "O",
+                    "colorX": "Y",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorY": "W",
+                    "colorZ": "B",
+                    "colorX": "O",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": 1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorY": "G",
+                    "colorZ": "Y",
+                    "colorX": "R",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorY": "R",
+                    "colorZ": "W",
+                    "colorX": "G",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": -1
+                    },
+                    "modelExists": false,
+                    "colorY": "R",
+                    "colorZ": "B",
+                    "colorX": "Y",
+                    "currentPos": {
+                        "posX": -1,
+                        "posY": -1,
+                        "posZ": -1
+                    }
+                },
+                {
+                    "targetPos": {
+                        "posX": 1,
+                        "posY": 1,
+                        "posZ": 1
+                    },
+                    "modelExists": false,
+                    "colorY": "B",
+                    "colorZ": "R",
+                    "colorX": "W",
+                    "currentPos": {
+                        "posX": 1,
+                        "posY": -1,
+                        "posZ": 1
+                    }
+                }
+            ]
+        }
+    ],
+    "modelExists": false,
+    "cube": {
+        "modelExists": false,
+        "centerCubelets": [
+            {
+                "targetPos": {
+                    "posX": -1,
+                    "posY": 0,
+                    "posZ": 0
+                },
+                "modelExists": false,
+                "colorX": "O",
+                "currentPos": {
+                    "posX": -1,
+                    "posY": 0,
+                    "posZ": 0
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 0,
+                    "posY": -1,
+                    "posZ": 0
+                },
+                "modelExists": false,
+                "colorY": "G",
+                "currentPos": {
+                    "posX": 0,
+                    "posY": -1,
+                    "posZ": 0
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 0,
+                    "posY": 0,
+                    "posZ": -1
+                },
+                "modelExists": false,
+                "colorZ": "Y",
+                "currentPos": {
+                    "posX": 0,
+                    "posY": 0,
+                    "posZ": -1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 0,
+                    "posY": 0,
+                    "posZ": 1
+                },
+                "modelExists": false,
+                "colorZ": "W",
+                "currentPos": {
+                    "posX": 0,
+                    "posY": 0,
+                    "posZ": 1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 0,
+                    "posY": 1,
+                    "posZ": 0
+                },
+                "modelExists": false,
+                "colorY": "B",
+                "currentPos": {
+                    "posX": 0,
+                    "posY": 1,
+                    "posZ": 0
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 1,
+                    "posY": 0,
+                    "posZ": 0
+                },
+                "modelExists": false,
+                "colorX": "R",
+                "currentPos": {
+                    "posX": 1,
+                    "posY": 0,
+                    "posZ": 0
+                }
+            }
+        ],
+        "edgeCubelets": [
+            {
+                "targetPos": {
+                    "posX": -1,
+                    "posY": -1,
+                    "posZ": 0
+                },
+                "modelExists": false,
+                "colorZ": "G",
+                "colorX": "O",
+                "currentPos": {
+                    "posX": 1,
+                    "posY": 0,
+                    "posZ": -1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": -1,
+                    "posY": 0,
+                    "posZ": -1
+                },
+                "modelExists": false,
+                "colorY": "O",
+                "colorZ": "Y",
+                "currentPos": {
+                    "posX": 0,
+                    "posY": 1,
+                    "posZ": -1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": -1,
+                    "posY": 0,
+                    "posZ": 1
+                },
+                "modelExists": false,
+                "colorZ": "W",
+                "colorX": "O",
+                "currentPos": {
+                    "posX": -1,
+                    "posY": 0,
+                    "posZ": 1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": -1,
+                    "posY": 1,
+                    "posZ": 0
+                },
+                "modelExists": false,
+                "colorZ": "B",
+                "colorX": "O",
+                "currentPos": {
+                    "posX": 1,
+                    "posY": 0,
+                    "posZ": 1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 0,
+                    "posY": -1,
+                    "posZ": -1
+                },
+                "modelExists": false,
+                "colorY": "Y",
+                "colorX": "G",
+                "currentPos": {
+                    "posX": 1,
+                    "posY": -1,
+                    "posZ": 0
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 0,
+                    "posY": -1,
+                    "posZ": 1
+                },
+                "modelExists": false,
+                "colorY": "G",
+                "colorZ": "W",
+                "currentPos": {
+                    "posX": 0,
+                    "posY": 1,
+                    "posZ": 1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 0,
+                    "posY": 1,
+                    "posZ": -1
+                },
+                "modelExists": false,
+                "colorZ": "Y",
+                "colorX": "B",
+                "currentPos": {
+                    "posX": -1,
+                    "posY": 0,
+                    "posZ": -1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 0,
+                    "posY": 1,
+                    "posZ": 1
+                },
+                "modelExists": false,
+                "colorY": "B",
+                "colorX": "W",
+                "currentPos": {
+                    "posX": -1,
+                    "posY": -1,
+                    "posZ": 0
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 1,
+                    "posY": -1,
+                    "posZ": 0
+                },
+                "modelExists": false,
+                "colorY": "G",
+                "colorZ": "R",
+                "currentPos": {
+                    "posX": 0,
+                    "posY": -1,
+                    "posZ": -1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 1,
+                    "posY": 0,
+                    "posZ": -1
+                },
+                "modelExists": false,
+                "colorY": "Y",
+                "colorX": "R",
+                "currentPos": {
+                    "posX": -1,
+                    "posY": 1,
+                    "posZ": 0
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 1,
+                    "posY": 0,
+                    "posZ": 1
+                },
+                "modelExists": false,
+                "colorY": "W",
+                "colorX": "R",
+                "currentPos": {
+                    "posX": 1,
+                    "posY": 1,
+                    "posZ": 0
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 1,
+                    "posY": 1,
+                    "posZ": 0
+                },
+                "modelExists": false,
+                "colorY": "R",
+                "colorZ": "B",
+                "currentPos": {
+                    "posX": 0,
+                    "posY": -1,
+                    "posZ": 1
+                }
+            }
+        ],
+        "cornerCubelets": [
+            {
+                "targetPos": {
+                    "posX": -1,
+                    "posY": -1,
+                    "posZ": -1
+                },
+                "modelExists": false,
+                "colorY": "Y",
+                "colorZ": "O",
+                "colorX": "G",
+                "currentPos": {
+                    "posX": 1,
+                    "posY": 1,
+                    "posZ": -1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": -1,
+                    "posY": -1,
+                    "posZ": 1
+                },
+                "modelExists": false,
+                "colorY": "O",
+                "colorZ": "G",
+                "colorX": "W",
+                "currentPos": {
+                    "posX": 1,
+                    "posY": -1,
+                    "posZ": -1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": -1,
+                    "posY": 1,
+                    "posZ": -1
+                },
+                "modelExists": false,
+                "colorY": "O",
+                "colorZ": "B",
+                "colorX": "Y",
+                "currentPos": {
+                    "posX": -1,
+                    "posY": -1,
+                    "posZ": 1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": -1,
+                    "posY": 1,
+                    "posZ": 1
+                },
+                "modelExists": false,
+                "colorY": "W",
+                "colorZ": "O",
+                "colorX": "B",
+                "currentPos": {
+                    "posX": -1,
+                    "posY": -1,
+                    "posZ": -1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 1,
+                    "posY": -1,
+                    "posZ": -1
+                },
+                "modelExists": false,
+                "colorY": "R",
+                "colorZ": "Y",
+                "colorX": "G",
+                "currentPos": {
+                    "posX": -1,
+                    "posY": 1,
+                    "posZ": 1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 1,
+                    "posY": -1,
+                    "posZ": 1
+                },
+                "modelExists": false,
+                "colorY": "G",
+                "colorZ": "R",
+                "colorX": "W",
+                "currentPos": {
+                    "posX": -1,
+                    "posY": 1,
+                    "posZ": -1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 1,
+                    "posY": 1,
+                    "posZ": -1
+                },
+                "modelExists": false,
+                "colorY": "Y",
+                "colorZ": "R",
+                "colorX": "B",
+                "currentPos": {
+                    "posX": 1,
+                    "posY": -1,
+                    "posZ": 1
+                }
+            },
+            {
+                "targetPos": {
+                    "posX": 1,
+                    "posY": 1,
+                    "posZ": 1
+                },
+                "modelExists": false,
+                "colorY": "B",
+                "colorZ": "W",
+                "colorX": "R",
+                "currentPos": {
+                    "posX": 1,
+                    "posY": 1,
+                    "posZ": 1
+                }
+            }
+        ]
+    }
+}

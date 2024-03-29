@@ -14,11 +14,8 @@ import model.Position;
 import java.util.HashMap;
 import java.util.Map;
 
+// Class representing a cubelet 3D model, consisting of a central box and stickers
 public class CubeletModel {
-    private static final int WIDTH = 1400;
-    private static final int HEIGHT = 800;
-    private static final double CENTER_X = WIDTH / 2.0;
-    private static final double CENTER_Y = HEIGHT / 2.0;
     private static final int CUBELET_SIZE = 50;
     private static final int STICKER_SIZE = CUBELET_SIZE - 6;
     private Group group;
@@ -27,10 +24,13 @@ public class CubeletModel {
     private double cubeletCenterZ;
     private double rotationRate = 50;
 
+    // EFFECTS: constructor for cubelet model with colors and a position
     public CubeletModel(String colorX, String colorY, String colorZ, Position pos) {
         createGroup(colorX, colorY, colorZ, pos);
     }
 
+    // MODIFIES: this
+    // EFFECTS: creates the 3D model of the cubelet
     public void createGroup(String colorX, String colorY, String colorZ, Position pos) {
         cubeletCenterX = CUBELET_SIZE * pos.getX();
         cubeletCenterY = -1 * CUBELET_SIZE * pos.getZ();
@@ -51,6 +51,8 @@ public class CubeletModel {
         }
     }
 
+    // MODIFIES: this
+    // EFFECTS: creates the center box
     private void addBox() {
         Box box = new Box(CUBELET_SIZE, CUBELET_SIZE, CUBELET_SIZE);
         PhongMaterial material = new PhongMaterial();
@@ -62,6 +64,8 @@ public class CubeletModel {
         group.getChildren().add(box);
     }
 
+    // MODIFIES: this
+    // EFFECTS: creates the sticker on the x-axis
     private void addStickerX(String color, int xpos) {
         Box stickerX = new Box(1, STICKER_SIZE, STICKER_SIZE);
         PhongMaterial materialX = new PhongMaterial();
@@ -73,6 +77,8 @@ public class CubeletModel {
         group.getChildren().add(stickerX);
     }
 
+    // MODIFIES: this
+    // EFFECTS: creates the sticker on the y-axis
     private void addStickerY(String color, int ypos) {
         Box stickerY = new Box(STICKER_SIZE, 1, STICKER_SIZE);
         PhongMaterial materialY = new PhongMaterial();
@@ -84,6 +90,8 @@ public class CubeletModel {
         group.getChildren().add(stickerY);
     }
 
+    // MODIFIES: this
+    // EFFECTS: creates the sticker on the z-axis
     private void addStickerZ(String color, int zpos) {
         Box stickerZ = new Box(STICKER_SIZE, STICKER_SIZE, 1);
         PhongMaterial materialZ = new PhongMaterial();
@@ -99,6 +107,8 @@ public class CubeletModel {
         return group;
     }
 
+    // REQUIRES: color is one of W, O, G, R, B, Y
+    // EFFECTS: return the javafx color given a string color
     public Color getColor(String color) {
         Map<String, Color> colorMap = new HashMap<>();
         colorMap.put("W", Color.WHITE);
@@ -111,6 +121,9 @@ public class CubeletModel {
         return colorMap.get(color);
     }
 
+    // REQUIRES: orientation is valid
+    // MODIFIES: this
+    // EFFECTS: rotates the cubelet model and animates it
     public void rotate(String orientation, boolean clockwise) {
         Gui3D.setAnimating(true);
 
@@ -122,6 +135,9 @@ public class CubeletModel {
         timeline.setOnFinished(e -> Gui3D.setAnimating(false));
     }
 
+    // REQUIRES: orientation is valid
+    // MODIFIES: this
+    // EFFECTS: performs the rotation of the cubelet model
     private void performRotation(String orientation, boolean clockwise) {
         Rotate r;
         double angle = 90 / rotationRate;
