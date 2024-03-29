@@ -8,7 +8,6 @@ import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Transform;
 import model.Position;
 
-
 import java.util.HashMap;
 import java.util.Map;
 
