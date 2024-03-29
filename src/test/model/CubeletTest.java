@@ -69,32 +69,32 @@ class CubeletTest {
     @Test
     void testRotate() {
         Cubelet edgeCopy = new EdgeCubelet(edge);
-        edgeCopy.rotate("U");
+        edgeCopy.rotate("U", true);
         assertEquals(edge.getColorX(), edgeCopy.getColorY());
         assertEquals(edge.getColorY(), edgeCopy.getColorX());
 
         edgeCopy = new EdgeCubelet(edge);
-        edgeCopy.rotate("L");
+        edgeCopy.rotate("L", true);
         assertEquals(edge.getColorY(), edgeCopy.getColorZ());
         assertEquals(edge.getColorZ(), edgeCopy.getColorY());
 
         edgeCopy = new EdgeCubelet(edge);
-        edgeCopy.rotate("F");
+        edgeCopy.rotate("F", true);
         assertEquals(edge.getColorX(), edgeCopy.getColorZ());
         assertEquals(edge.getColorZ(), edgeCopy.getColorX());
 
         Cubelet cornerCopy = new CornerCubelet(corner);
-        cornerCopy.rotate("D");
+        cornerCopy.rotate("D", false);
         assertEquals(corner.getColorX(), cornerCopy.getColorY());
         assertEquals(corner.getColorY(), cornerCopy.getColorX());
 
         cornerCopy = new CornerCubelet(corner);
-        cornerCopy.rotate("R");
+        cornerCopy.rotate("R", false);
         assertEquals(corner.getColorY(), cornerCopy.getColorZ());
         assertEquals(corner.getColorZ(), cornerCopy.getColorY());
 
         cornerCopy = new CornerCubelet(corner);
-        cornerCopy.rotate("B");
+        cornerCopy.rotate("B", false);
         assertEquals(corner.getColorX(), cornerCopy.getColorZ());
         assertEquals(corner.getColorZ(), cornerCopy.getColorX());
     }

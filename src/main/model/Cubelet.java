@@ -89,7 +89,7 @@ public class Cubelet implements Writable {
     // REQUIRES: orientation is one of U L F R B D
     // MODIFIES: this
     // EFFECTS: corrects the x, y, and z colors of the cubelet after it is rotated
-    public void rotate(String orientation) {
+    public void rotate(String orientation, boolean clockwise) {
         if (orientation.equals("U") || orientation.equals("D")) {
             String colorX = getColorX();
             setColorX(getColorY());
@@ -104,7 +104,7 @@ public class Cubelet implements Writable {
             setColorZ(colorX);
         }
         if (cubeletModel != null) {
-            cubeletModel.rotate(orientation);
+            cubeletModel.rotate(orientation, clockwise);
         }
     }
 

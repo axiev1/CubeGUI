@@ -115,10 +115,10 @@ public class Face {
 
     // MODIFIES: this, orderedCubelets
     // EFFECTS: corrects the colors of the cubelet after rotation of the face
-    private void rotateCubeletColors(Cubelet[][] orderedCubelets) {
+    private void rotateCubeletColors(Cubelet[][] orderedCubelets, boolean clockwise) {
         for (Cubelet[] row : orderedCubelets) {
             for (Cubelet c : row) {
-                c.rotate(orientation);
+                c.rotate(orientation, clockwise);
             }
         }
     }
@@ -139,7 +139,7 @@ public class Face {
         orderedCubelets[2][1].setPos(orderedCubelets[1][0].getPos());
         orderedCubelets[1][0].setPos(topPos);
 
-        rotateCubeletColors(orderedCubelets);
+        rotateCubeletColors(orderedCubelets, true);
     }
 
     // MODIFIES: this
@@ -158,6 +158,6 @@ public class Face {
         orderedCubelets[2][1].setPos(orderedCubelets[1][2].getPos());
         orderedCubelets[1][2].setPos(topPos);
 
-        rotateCubeletColors(orderedCubelets);
+        rotateCubeletColors(orderedCubelets, false);
     }
 }

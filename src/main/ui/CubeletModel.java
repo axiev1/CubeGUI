@@ -1,11 +1,14 @@
 package ui;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Box;
 import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Transform;
+import javafx.util.Duration;
 import model.Position;
 
 import java.util.HashMap;
@@ -22,6 +25,8 @@ public class CubeletModel {
     private double cubeletCenterX;
     private double cubeletCenterY;
     private double cubeletCenterZ;
+    private double rotationRate = 50;
+    private boolean animating = false;
 
     public CubeletModel(String colorX, String colorY, String colorZ, Position pos) {
         createGroup(colorX, colorY, colorZ, pos);
@@ -107,12 +112,26 @@ public class CubeletModel {
         return colorMap.get(color);
     }
 
-    public void rotate(String orientation) {
+    public void rotate(String orientation, boolean clockwise) {
+        GUI3D.setAnimating(true);
+
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(6),
+                e -> performRotation(orientation, clockwise)));
+        timeline.setCycleCount((int) rotationRate);
+        timeline.playFromStart();
+
+        timeline.setOnFinished(e -> GUI3D.setAnimating(false));
+    }
+
+    private void performRotation(String orientation, boolean clockwise) {
         Rotate r;
-        Transform t = new Rotate();
-        int angle = 90;
+        double angle = 90 / rotationRate;
         if (orientation.equals("D") || orientation.equals("R") || orientation.equals("B")) {
-            angle = -90;
+            angle = -90 / rotationRate;
+        }
+
+        if (!clockwise) {
+            angle *= -1;
         }
 
         if (orientation.equals("U") || orientation.equals("D")) {
@@ -128,5 +147,9 @@ public class CubeletModel {
         } else {
             group.getTransforms().add(r);
         }
+    }
+
+    public boolean isAnimating() {
+        return animating;
     }
 }
