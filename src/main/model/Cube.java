@@ -12,13 +12,22 @@ public class Cube implements Writable {
     private LinkedList<Cubelet> centerCubelets;
     private LinkedList<EdgeCubelet> edgeCubelets;
     private LinkedList<CornerCubelet> cornerCubelets;
+    private boolean modelExists;
 
-    // EFFECTS: Initializes a cube in the solved state
     public Cube() {
         this.centerCubelets = new LinkedList<>();
         this.edgeCubelets = new LinkedList<>();
         this.cornerCubelets = new LinkedList<>();
+        this.modelExists = false;
+        generateStartingPositions();
+    }
 
+    // EFFECTS: Initializes a cube in the solved state
+    public Cube(boolean modelExists) {
+        this.centerCubelets = new LinkedList<>();
+        this.edgeCubelets = new LinkedList<>();
+        this.cornerCubelets = new LinkedList<>();
+        this.modelExists = modelExists;
         generateStartingPositions();
     }
 
@@ -27,6 +36,7 @@ public class Cube implements Writable {
         this.centerCubelets = new LinkedList<>();
         this.edgeCubelets = new LinkedList<>();
         this.cornerCubelets = new LinkedList<>();
+        this.modelExists = cube.isModelExists();
 
         for (Cubelet c : cube.getCenterCubelets()) {
             this.centerCubelets.add(new Cubelet(c));
@@ -231,18 +241,26 @@ public class Cube implements Writable {
                     numberOfZeroVals = ((x == 0) ? 1 : 0) + ((y == 0) ? 1 : 0) + ((z == 0) ? 1 : 0);
                     switch (numberOfZeroVals) {
                         case 0:
-                            addCornerCubelet(new CornerCubelet(new Position(x, y, z)));
+                            addCornerCubelet(new CornerCubelet(new Position(x, y, z), isModelExists()));
                             break;
                         case 1:
-                            addEdgeCubelet(new EdgeCubelet(new Position(x, y, z)));
+                            addEdgeCubelet(new EdgeCubelet(new Position(x, y, z), isModelExists()));
                             break;
                         case 2:
-                            addCenterCubelet(new Cubelet(new Position(x, y, z)));
+                            addCenterCubelet(new Cubelet(new Position(x, y, z), isModelExists()));
                             break;
                     }
                 }
             }
         }
+    }
+
+    public boolean isModelExists() {
+        return modelExists;
+    }
+
+    public void setModelExists(boolean modelExists) {
+        this.modelExists = modelExists;
     }
 
     // EFFECTS: returns cube as JSONobject

@@ -22,6 +22,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+// 3D GUI with JavaFX and Swing.
+// Learned JavaFX syntax from https://www.youtube.com/playlist?list=PLhs1urmduZ295Ryetga7CNOqDymN_rhB_
+// Learned Swing syntax from
 public class Gui3D extends JFrame {
     private static final int WIDTH = 1480;
     private static final int HEIGHT = 850;
@@ -97,7 +100,7 @@ public class Gui3D extends JFrame {
         group.translateZProperty().set(-1000);
 
         if (cubeHandler == null) {
-            cubeHandler = new CubeHandler();
+            cubeHandler = new CubeHandler(true);
         }
 
         createNewCubeModel();

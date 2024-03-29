@@ -47,7 +47,7 @@ public class JsonReader {
 
     // EFFECTS: parses cube handler from JSON object and returns it
     private CubeHandler parseCubeHandler(JSONObject jsonObject) {
-        CubeHandler ch = new CubeHandler();
+        CubeHandler ch = new CubeHandler(jsonObject.getBoolean("modelExists"));
 
         Cube cube = parseCube((JSONObject) jsonObject.get("cube"));
         ch.setCube(cube);
@@ -95,13 +95,16 @@ public class JsonReader {
     private void addCenterCubelet(Cube cube, JSONObject jsonObject) {
         Position targetPos = parsePos((JSONObject) jsonObject.get("targetPos"));
 
-        Cubelet centerCubelet = new Cubelet(targetPos);
+        Cubelet centerCubelet = new Cubelet(targetPos, jsonObject.getBoolean("modelExists"));
         centerCubelet.setPos(parsePos((JSONObject) jsonObject.get("currentPos")));
         centerCubelet.setColorX(parseColor("colorX", jsonObject));
         centerCubelet.setColorY(parseColor("colorY", jsonObject));
         centerCubelet.setColorZ(parseColor("colorZ", jsonObject));
-        centerCubelet.getCubeletModel().createGroup(centerCubelet.getColorX(), centerCubelet.getColorY(),
-                centerCubelet.getColorZ(), centerCubelet.getPos());
+
+        if (centerCubelet.isModelExists()) {
+            centerCubelet.getCubeletModel().createGroup(centerCubelet.getColorX(), centerCubelet.getColorY(),
+                    centerCubelet.getColorZ(), centerCubelet.getPos());
+        }
 
         cube.getCenterCubelets().remove();
         cube.addCenterCubelet(centerCubelet);
@@ -123,14 +126,16 @@ public class JsonReader {
     private void addEdgeCubelet(Cube cube, JSONObject jsonObject) {
         Position targetPos = parsePos((JSONObject) jsonObject.get("targetPos"));
 
-        EdgeCubelet edgeCubelet = new EdgeCubelet(targetPos);
+        EdgeCubelet edgeCubelet = new EdgeCubelet(targetPos, jsonObject.getBoolean("modelExists"));
         edgeCubelet.setPos(parsePos((JSONObject) jsonObject.get("currentPos")));
         edgeCubelet.setColorX(parseColor("colorX", jsonObject));
         edgeCubelet.setColorY(parseColor("colorY", jsonObject));
         edgeCubelet.setColorZ(parseColor("colorZ", jsonObject));
 
-        edgeCubelet.getCubeletModel().createGroup(edgeCubelet.getColorX(), edgeCubelet.getColorY(),
-                edgeCubelet.getColorZ(), edgeCubelet.getPos());
+        if (edgeCubelet.isModelExists()) {
+            edgeCubelet.getCubeletModel().createGroup(edgeCubelet.getColorX(), edgeCubelet.getColorY(),
+                    edgeCubelet.getColorZ(), edgeCubelet.getPos());
+        }
 
         cube.getEdgeCubelets().remove();
         cube.addEdgeCubelet(edgeCubelet);
@@ -152,14 +157,16 @@ public class JsonReader {
     private void addCornerCubelet(Cube cube, JSONObject jsonObject) {
         Position targetPos = parsePos((JSONObject) jsonObject.get("targetPos"));
 
-        CornerCubelet cornerCubelet = new CornerCubelet(targetPos);
+        CornerCubelet cornerCubelet = new CornerCubelet(targetPos, jsonObject.getBoolean("modelExists"));
         cornerCubelet.setPos(parsePos((JSONObject) jsonObject.get("currentPos")));
         cornerCubelet.setColorX(parseColor("colorX", jsonObject));
         cornerCubelet.setColorY(parseColor("colorY", jsonObject));
         cornerCubelet.setColorZ(parseColor("colorZ", jsonObject));
 
-        cornerCubelet.getCubeletModel().createGroup(cornerCubelet.getColorX(), cornerCubelet.getColorY(),
-                cornerCubelet.getColorZ(), cornerCubelet.getPos());
+        if (cornerCubelet.isModelExists()) {
+            cornerCubelet.getCubeletModel().createGroup(cornerCubelet.getColorX(), cornerCubelet.getColorY(),
+                    cornerCubelet.getColorZ(), cornerCubelet.getPos());
+        }
 
         cube.getCornerCubelets().remove();
         cube.addCornerCubelet(cornerCubelet);

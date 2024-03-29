@@ -2,9 +2,13 @@ package model;
 
 // Represents an edge cubelet in the Rubik's cube
 public class EdgeCubelet extends Cubelet {
-    // EFFECTS: creates a new edge cubelet with a position
     public EdgeCubelet(Position pos) {
         super(pos);
+    }
+
+    // EFFECTS: creates a new edge cubelet with a position
+    public EdgeCubelet(Position pos, boolean modelExists) {
+        super(pos, modelExists);
     }
 
     // EFFECTS: copy constructor for edge cubelet
@@ -38,7 +42,14 @@ public class EdgeCubelet extends Cubelet {
             setColorZ(null);
         }
 
-        getCubeletModel().createGroup(getColorX(), getColorY(), getColorZ(), getPos());
+        generateModel();
+    }
+
+    //
+    private void generateModel() {
+        if (isModelExists()) {
+            getCubeletModel().createGroup(getColorX(), getColorY(), getColorZ(), getPos());
+        }
     }
 
     // EFFECTS: returns the first color of the cubelet

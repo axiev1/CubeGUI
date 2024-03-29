@@ -8,6 +8,7 @@
                         "posY": 0,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorX": "O",
                     "currentPos": {
                         "posX": -1,
@@ -21,6 +22,7 @@
                         "posY": -1,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorY": "G",
                     "currentPos": {
                         "posX": 0,
@@ -34,6 +36,7 @@
                         "posY": 0,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorZ": "Y",
                     "currentPos": {
                         "posX": 0,
@@ -47,6 +50,7 @@
                         "posY": 0,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorZ": "W",
                     "currentPos": {
                         "posX": 0,
@@ -60,6 +64,7 @@
                         "posY": 1,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorY": "B",
                     "currentPos": {
                         "posX": 0,
@@ -73,6 +78,7 @@
                         "posY": 0,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorX": "R",
                     "currentPos": {
                         "posX": 1,
@@ -88,6 +94,7 @@
                         "posY": -1,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorY": "O",
                     "colorX": "G",
                     "currentPos": {
@@ -102,6 +109,7 @@
                         "posY": 0,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorY": "Y",
                     "colorZ": "O",
                     "currentPos": {
@@ -116,6 +124,7 @@
                         "posY": 0,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorY": "O",
                     "colorZ": "W",
                     "currentPos": {
@@ -130,6 +139,7 @@
                         "posY": 1,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorZ": "O",
                     "colorX": "B",
                     "currentPos": {
@@ -144,6 +154,7 @@
                         "posY": -1,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorZ": "Y",
                     "colorX": "G",
                     "currentPos": {
@@ -158,6 +169,7 @@
                         "posY": -1,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorY": "W",
                     "colorX": "G",
                     "currentPos": {
@@ -172,6 +184,7 @@
                         "posY": 1,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorZ": "B",
                     "colorX": "Y",
                     "currentPos": {
@@ -186,6 +199,7 @@
                         "posY": 1,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorY": "W",
                     "colorZ": "B",
                     "currentPos": {
@@ -200,6 +214,7 @@
                         "posY": -1,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorZ": "R",
                     "colorX": "G",
                     "currentPos": {
@@ -214,6 +229,7 @@
                         "posY": 0,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorY": "Y",
                     "colorZ": "R",
                     "currentPos": {
@@ -228,6 +244,7 @@
                         "posY": 0,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorY": "W",
                     "colorX": "R",
                     "currentPos": {
@@ -242,6 +259,7 @@
                         "posY": 1,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorY": "R",
                     "colorX": "B",
                     "currentPos": {
@@ -258,6 +276,7 @@
                         "posY": -1,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorY": "G",
                     "colorZ": "O",
                     "colorX": "Y",
@@ -273,6 +292,7 @@
                         "posY": -1,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorY": "G",
                     "colorZ": "O",
                     "colorX": "W",
@@ -288,6 +308,7 @@
                         "posY": 1,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorY": "B",
                     "colorZ": "Y",
                     "colorX": "O",
@@ -303,6 +324,7 @@
                         "posY": 1,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorY": "O",
                     "colorZ": "W",
                     "colorX": "B",
@@ -318,6 +340,7 @@
                         "posY": -1,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorY": "G",
                     "colorZ": "R",
                     "colorX": "Y",
@@ -333,6 +356,7 @@
                         "posY": -1,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorY": "W",
                     "colorZ": "R",
                     "colorX": "G",
@@ -348,6 +372,7 @@
                         "posY": 1,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorY": "R",
                     "colorZ": "Y",
                     "colorX": "B",
@@ -363,6 +388,7 @@
                         "posY": 1,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorY": "R",
                     "colorZ": "W",
                     "colorX": "B",
@@ -382,6 +408,7 @@
                         "posY": 0,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorX": "O",
                     "currentPos": {
                         "posX": -1,
@@ -395,6 +422,7 @@
                         "posY": -1,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorY": "G",
                     "currentPos": {
                         "posX": 0,
@@ -408,6 +436,7 @@
                         "posY": 0,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorZ": "Y",
                     "currentPos": {
                         "posX": 0,
@@ -421,6 +450,7 @@
                         "posY": 0,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorZ": "W",
                     "currentPos": {
                         "posX": 0,
@@ -434,6 +464,7 @@
                         "posY": 1,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorY": "B",
                     "currentPos": {
                         "posX": 0,
@@ -447,6 +478,7 @@
                         "posY": 0,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorX": "R",
                     "currentPos": {
                         "posX": 1,
@@ -462,6 +494,7 @@
                         "posY": -1,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorZ": "O",
                     "colorX": "G",
                     "currentPos": {
@@ -476,6 +509,7 @@
                         "posY": 0,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorY": "O",
                     "colorZ": "Y",
                     "currentPos": {
@@ -490,6 +524,7 @@
                         "posY": 0,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorZ": "O",
                     "colorX": "W",
                     "currentPos": {
@@ -504,6 +539,7 @@
                         "posY": 1,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorY": "O",
                     "colorZ": "B",
                     "currentPos": {
@@ -518,6 +554,7 @@
                         "posY": -1,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorY": "Y",
                     "colorZ": "G",
                     "currentPos": {
@@ -532,6 +569,7 @@
                         "posY": -1,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorY": "G",
                     "colorX": "W",
                     "currentPos": {
@@ -546,6 +584,7 @@
                         "posY": 1,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorY": "Y",
                     "colorX": "B",
                     "currentPos": {
@@ -560,6 +599,7 @@
                         "posY": 1,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorY": "W",
                     "colorZ": "B",
                     "currentPos": {
@@ -574,6 +614,7 @@
                         "posY": -1,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorZ": "R",
                     "colorX": "G",
                     "currentPos": {
@@ -588,6 +629,7 @@
                         "posY": 0,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorY": "Y",
                     "colorX": "R",
                     "currentPos": {
@@ -602,6 +644,7 @@
                         "posY": 0,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorZ": "R",
                     "colorX": "W",
                     "currentPos": {
@@ -616,6 +659,7 @@
                         "posY": 1,
                         "posZ": 0
                     },
+                    "modelExists": false,
                     "colorY": "R",
                     "colorX": "B",
                     "currentPos": {
@@ -632,6 +676,7 @@
                         "posY": -1,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorY": "O",
                     "colorZ": "Y",
                     "colorX": "G",
@@ -647,6 +692,7 @@
                         "posY": -1,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorY": "W",
                     "colorZ": "G",
                     "colorX": "O",
@@ -662,6 +708,7 @@
                         "posY": 1,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorY": "B",
                     "colorZ": "O",
                     "colorX": "Y",
@@ -677,6 +724,7 @@
                         "posY": 1,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorY": "W",
                     "colorZ": "B",
                     "colorX": "O",
@@ -692,6 +740,7 @@
                         "posY": -1,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorY": "G",
                     "colorZ": "Y",
                     "colorX": "R",
@@ -707,6 +756,7 @@
                         "posY": -1,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorY": "R",
                     "colorZ": "W",
                     "colorX": "G",
@@ -722,6 +772,7 @@
                         "posY": 1,
                         "posZ": -1
                     },
+                    "modelExists": false,
                     "colorY": "R",
                     "colorZ": "B",
                     "colorX": "Y",
@@ -737,6 +788,7 @@
                         "posY": 1,
                         "posZ": 1
                     },
+                    "modelExists": false,
                     "colorY": "B",
                     "colorZ": "R",
                     "colorX": "W",
@@ -749,6 +801,7 @@
             ]
         }
     ],
+    "modelExists": false,
     "cube": {
         "centerCubelets": [
             {
@@ -757,6 +810,7 @@
                     "posY": 0,
                     "posZ": 0
                 },
+                "modelExists": false,
                 "colorX": "O",
                 "currentPos": {
                     "posX": -1,
@@ -770,6 +824,7 @@
                     "posY": -1,
                     "posZ": 0
                 },
+                "modelExists": false,
                 "colorY": "G",
                 "currentPos": {
                     "posX": 0,
@@ -783,6 +838,7 @@
                     "posY": 0,
                     "posZ": -1
                 },
+                "modelExists": false,
                 "colorZ": "Y",
                 "currentPos": {
                     "posX": 0,
@@ -796,6 +852,7 @@
                     "posY": 0,
                     "posZ": 1
                 },
+                "modelExists": false,
                 "colorZ": "W",
                 "currentPos": {
                     "posX": 0,
@@ -809,6 +866,7 @@
                     "posY": 1,
                     "posZ": 0
                 },
+                "modelExists": false,
                 "colorY": "B",
                 "currentPos": {
                     "posX": 0,
@@ -822,6 +880,7 @@
                     "posY": 0,
                     "posZ": 0
                 },
+                "modelExists": false,
                 "colorX": "R",
                 "currentPos": {
                     "posX": 1,
@@ -837,6 +896,7 @@
                     "posY": -1,
                     "posZ": 0
                 },
+                "modelExists": false,
                 "colorZ": "G",
                 "colorX": "O",
                 "currentPos": {
@@ -851,6 +911,7 @@
                     "posY": 0,
                     "posZ": -1
                 },
+                "modelExists": false,
                 "colorY": "O",
                 "colorZ": "Y",
                 "currentPos": {
@@ -865,6 +926,7 @@
                     "posY": 0,
                     "posZ": 1
                 },
+                "modelExists": false,
                 "colorZ": "W",
                 "colorX": "O",
                 "currentPos": {
@@ -879,6 +941,7 @@
                     "posY": 1,
                     "posZ": 0
                 },
+                "modelExists": false,
                 "colorZ": "B",
                 "colorX": "O",
                 "currentPos": {
@@ -893,6 +956,7 @@
                     "posY": -1,
                     "posZ": -1
                 },
+                "modelExists": false,
                 "colorY": "Y",
                 "colorX": "G",
                 "currentPos": {
@@ -907,6 +971,7 @@
                     "posY": -1,
                     "posZ": 1
                 },
+                "modelExists": false,
                 "colorY": "G",
                 "colorZ": "W",
                 "currentPos": {
@@ -921,6 +986,7 @@
                     "posY": 1,
                     "posZ": -1
                 },
+                "modelExists": false,
                 "colorZ": "Y",
                 "colorX": "B",
                 "currentPos": {
@@ -935,6 +1001,7 @@
                     "posY": 1,
                     "posZ": 1
                 },
+                "modelExists": false,
                 "colorY": "B",
                 "colorX": "W",
                 "currentPos": {
@@ -949,6 +1016,7 @@
                     "posY": -1,
                     "posZ": 0
                 },
+                "modelExists": false,
                 "colorY": "G",
                 "colorZ": "R",
                 "currentPos": {
@@ -963,6 +1031,7 @@
                     "posY": 0,
                     "posZ": -1
                 },
+                "modelExists": false,
                 "colorY": "Y",
                 "colorX": "R",
                 "currentPos": {
@@ -977,6 +1046,7 @@
                     "posY": 0,
                     "posZ": 1
                 },
+                "modelExists": false,
                 "colorY": "W",
                 "colorX": "R",
                 "currentPos": {
@@ -991,6 +1061,7 @@
                     "posY": 1,
                     "posZ": 0
                 },
+                "modelExists": false,
                 "colorY": "R",
                 "colorZ": "B",
                 "currentPos": {
@@ -1007,6 +1078,7 @@
                     "posY": -1,
                     "posZ": -1
                 },
+                "modelExists": false,
                 "colorY": "Y",
                 "colorZ": "O",
                 "colorX": "G",
@@ -1022,6 +1094,7 @@
                     "posY": -1,
                     "posZ": 1
                 },
+                "modelExists": false,
                 "colorY": "O",
                 "colorZ": "G",
                 "colorX": "W",
@@ -1037,6 +1110,7 @@
                     "posY": 1,
                     "posZ": -1
                 },
+                "modelExists": false,
                 "colorY": "O",
                 "colorZ": "B",
                 "colorX": "Y",
@@ -1052,6 +1126,7 @@
                     "posY": 1,
                     "posZ": 1
                 },
+                "modelExists": false,
                 "colorY": "W",
                 "colorZ": "O",
                 "colorX": "B",
@@ -1067,6 +1142,7 @@
                     "posY": -1,
                     "posZ": -1
                 },
+                "modelExists": false,
                 "colorY": "R",
                 "colorZ": "Y",
                 "colorX": "G",
@@ -1082,6 +1158,7 @@
                     "posY": -1,
                     "posZ": 1
                 },
+                "modelExists": false,
                 "colorY": "G",
                 "colorZ": "R",
                 "colorX": "W",
@@ -1097,6 +1174,7 @@
                     "posY": 1,
                     "posZ": -1
                 },
+                "modelExists": false,
                 "colorY": "Y",
                 "colorZ": "R",
                 "colorX": "B",
@@ -1112,6 +1190,7 @@
                     "posY": 1,
                     "posZ": 1
                 },
+                "modelExists": false,
                 "colorY": "B",
                 "colorZ": "W",
                 "colorX": "R",

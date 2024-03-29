@@ -42,7 +42,7 @@ class JsonReaderTest {
         try {
             CubeHandler ch = reader.read();
 
-            CubeHandler ch2 = new CubeHandler();
+            CubeHandler ch2 = new CubeHandler(false);
             ch2.parseScramble("D2 U B2 U2 R2 D2 U2 R' L F B R' B2 U' D' F U B' F2 D' U2 R2 F2 B2 D");
             ch2.saveCube();
             ch2.reset();

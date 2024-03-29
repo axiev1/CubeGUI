@@ -15,11 +15,21 @@ public class Cubelet implements Writable {
     private Position currentPos;
     private Position targetPos;
     private CubeletModel cubeletModel;
+    private boolean modelExists;
 
     // EFFECTS: Constructs new cubelet with a position and target position
     public Cubelet(Position pos) {
         this.currentPos = pos;
         this.targetPos = (new Position(pos));
+        this.modelExists = false;
+        setColors();
+    }
+
+    // EFFECTS: Constructs new cubelet with a position and target position
+    public Cubelet(Position pos, boolean modelExists) {
+        this.currentPos = pos;
+        this.targetPos = (new Position(pos));
+        this.modelExists = modelExists;
         setColors();
     }
 
@@ -30,8 +40,10 @@ public class Cubelet implements Writable {
         this.colorZ = c.getColorZ();
         this.currentPos = new Position(c.getPos());
         this.targetPos = new Position(c.getTargetPos());
-
-        cubeletModel = new CubeletModel(colorX, colorY, colorZ, currentPos);
+        this.modelExists = c.isModelExists();
+        if (this.modelExists) {
+            cubeletModel = new CubeletModel(colorX, colorY, colorZ, currentPos);
+        }
     }
 
     // MODIFIES: this
@@ -45,7 +57,9 @@ public class Cubelet implements Writable {
         setColorY(colorsY[targetPos.getY() + 1]);
         setColorZ(colorsZ[targetPos.getZ() + 1]);
 
-        cubeletModel = new CubeletModel(colorX, colorY, colorZ, currentPos);
+        if (modelExists) {
+            cubeletModel = new CubeletModel(colorX, colorY, colorZ, currentPos);
+        }
     }
 
     // REQUIRES: face is one of U, L, F, R, B, D
@@ -116,6 +130,14 @@ public class Cubelet implements Writable {
         return cubeletModel;
     }
 
+    public void setModelExists(boolean modelExists) {
+        this.modelExists = modelExists;
+    }
+
+    public boolean isModelExists() {
+        return modelExists;
+    }
+
     // EFFECTS: returns cubelet as JSONObject
     @Override
     public JSONObject toJson() {
@@ -126,6 +148,7 @@ public class Cubelet implements Writable {
         jsonObject.put("colorX", colorX);
         jsonObject.put("colorY", colorY);
         jsonObject.put("colorZ", colorZ);
+        jsonObject.put("modelExists", modelExists);
 
         return jsonObject;
     }

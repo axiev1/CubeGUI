@@ -26,7 +26,6 @@ public class CubeletModel {
     private double cubeletCenterY;
     private double cubeletCenterZ;
     private double rotationRate = 50;
-    private boolean animating = false;
 
     public CubeletModel(String colorX, String colorY, String colorZ, Position pos) {
         createGroup(colorX, colorY, colorZ, pos);
@@ -147,9 +146,5 @@ public class CubeletModel {
         } else {
             group.getTransforms().add(r);
         }
-    }
-
-    public boolean isAnimating() {
-        return animating;
     }
 }

@@ -21,7 +21,7 @@ public class CubeApp {
 
     // EFFECTS: starts the application
     public CubeApp() {
-        cubeHandler = new CubeHandler();
+        cubeHandler = new CubeHandler(false);
         scan = new Scanner(System.in);
         jsonWriter = new JsonWriter(JSON_STORE);
         jsonReader = new JsonReader(JSON_STORE);

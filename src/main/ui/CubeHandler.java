@@ -13,11 +13,13 @@ import java.util.Arrays;
 public class CubeHandler implements Writable {
     private Cube cube;
     private ArrayList<Cube> savedCubes;
+    private boolean modelExists;
 
     // EFFECTS: creates new cube handler object with a cube and an empty list of saved cube states
-    public CubeHandler() {
-        cube = new Cube();
+    public CubeHandler(boolean modelExists) {
+        cube = new Cube(modelExists);
         savedCubes = new ArrayList<>();
+        this.modelExists = modelExists;
     }
 
     // REQUIRES: scramble string is in proper notation
@@ -76,7 +78,7 @@ public class CubeHandler implements Writable {
     // MODIFIES: this
     // EFFECTS: resets the cube to the solved state
     public void reset() {
-        setCube(new Cube());
+        setCube(new Cube(modelExists));
     }
 
     // MODIFIES: this
@@ -167,6 +169,7 @@ public class CubeHandler implements Writable {
         JSONObject json = new JSONObject();
         json.put("cube", cube.toJson());
         json.put("savedCubes", savedCubesToJson());
+        json.put("modelExists", modelExists);
         return json;
     }
 

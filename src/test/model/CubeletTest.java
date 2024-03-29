@@ -11,9 +11,9 @@ class CubeletTest {
     private Cubelet corner;
     @BeforeEach
     void setUp() {
-        center = new Cubelet(new Position(0, 0, 1));
-        edge = new EdgeCubelet(new Position(-1, 0, 1));
-        corner = new CornerCubelet(new Position(-1, -1, 1));
+        center = new Cubelet(new Position(0, 0, 1), false);
+        edge = new EdgeCubelet(new Position(-1, 0, 1), false);
+        corner = new CornerCubelet(new Position(-1, -1, 1), false);
     }
 
     @Test
@@ -119,7 +119,7 @@ class CubeletTest {
         center2.setPos(new Position(1, 1, -1));
         assertFalse(center.equals(center2));
 
-        center2 = new Cubelet(new Position(0, 0, -1));
+        center2 = new Cubelet(new Position(0, 0, -1), false);
         center2.setColorX(center.getColorX());
         center2.setColorY(center.getColorY());
         center2.setColorZ(center.getColorZ());

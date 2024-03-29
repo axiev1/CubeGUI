@@ -12,7 +12,7 @@ class JsonWriterTest {
     @Test
     void testWriterInvalidFile() {
         try {
-            CubeHandler ch = new CubeHandler();
+            CubeHandler ch = new CubeHandler(false);
             JsonWriter writer = new JsonWriter("./data/my\0illegal:fileName.json");
             writer.open();
             fail("IOException was expected");
@@ -24,7 +24,7 @@ class JsonWriterTest {
     @Test
     void testWriterDefaultCubeHandler() {
         try {
-            CubeHandler ch = new CubeHandler();
+            CubeHandler ch = new CubeHandler(true);
             JsonWriter writer = new JsonWriter("./data/testWriterDefault.json");
             writer.open();
             writer.write(ch);
@@ -42,7 +42,7 @@ class JsonWriterTest {
     @Test
     void testWriterGeneralCubeHandler() {
         try {
-            CubeHandler ch = new CubeHandler();
+            CubeHandler ch = new CubeHandler(false);
             ch.parseScramble("D2 U B2 U2 R2 D2 U2 R' L F B R' B2 U' D' F U B' F2 D' U2 R2 F2 B2 D");
             ch.saveCube();
             ch.reset();

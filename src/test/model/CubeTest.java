@@ -244,7 +244,7 @@ class CubeTest {
         Cube cube2 = new Cube();
         assertTrue(cube.equals(cube2));
 
-        cube2.getCenterCubelets().set(0, new Cubelet(new Position(0, 0, -1)));
+        cube2.getCenterCubelets().set(0, new Cubelet(new Position(0, 0, -1), false));
         assertFalse(cube.equals(cube2));
 
         cube2 = new Cube(cube);
