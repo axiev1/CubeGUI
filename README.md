@@ -16,8 +16,7 @@ application to solve it for me
 - Scramble the cube according to a user inputted scramble string
 - View a list of moves needed to solve a given Rubik's cube
 - View and rotate the Cube in 3D
-- Playback the solving process of the Cube
-- Let the user create a cube
-- Be able to check whether a cube is in a solvable state
-- Be able to choose whether to save the state of the entire cube on exit
+- Be able to choose whether to save the state of the entire application on exit
 - Be able to choose whether to reload a saved state on application start
+
+##

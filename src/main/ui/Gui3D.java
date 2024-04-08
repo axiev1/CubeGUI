@@ -349,7 +349,7 @@ public class Gui3D extends JFrame {
 
     private static void printEventLog() {
         for (Event e : EventLog.getInstance()) {
-            System.out.println(e.getDescription());
+            System.out.println(e.toString());
         }
     }
 

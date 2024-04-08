@@ -35,7 +35,6 @@ public class CubeHandler implements Writable {
     // EFFECTS: sets the current cube
     public void setCube(Cube cube) {
         this.cube = cube;
-        EventLog.getInstance().logEvent(new Event("Saved cube loaded."));
     }
 
     public Cube getCube() {
@@ -96,6 +95,11 @@ public class CubeHandler implements Writable {
     // EFFECTS: loads a cube state from the saved states at index
     public void loadCube(int index) {
         setCube(savedCubes.get(index - 1));
+        EventLog.getInstance().logEvent(new Event("Saved cube loaded."));
+    }
+
+    public boolean isModelExists() {
+        return modelExists;
     }
 
     // EFFECTS: Converts cube handler to json
