@@ -1,6 +1,6 @@
 package persistence;
 
-import ui.CubeHandler;
+import model.CubeHandler;
 import org.json.JSONObject;
 
 import java.io.File;

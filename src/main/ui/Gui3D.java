@@ -12,7 +12,10 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.transform.Rotate;
+import model.CubeHandler;
 import model.Cubelet;
+import model.Event;
+import model.EventLog;
 import persistence.JsonReader;
 import persistence.JsonWriter;
 
@@ -89,8 +92,10 @@ public class Gui3D extends JFrame {
                         "Confirmation", JOptionPane.YES_NO_CANCEL_OPTION);
                 if (choice == JOptionPane.YES_OPTION) {
                     saveCubeHandler();
+                    printEventLog();
                     System.exit(0);
                 } else if (choice == JOptionPane.NO_OPTION) {
+                    printEventLog();
                     System.exit(0);
                 }
             }
@@ -340,6 +345,12 @@ public class Gui3D extends JFrame {
 
     public static void setAnimating(boolean animating) {
         Gui3D.animating = animating;
+    }
+
+    private static void printEventLog() {
+        for (Event e : EventLog.getInstance()) {
+            System.out.println(e.getDescription());
+        }
     }
 
     // MODIFIES: this

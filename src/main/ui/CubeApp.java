@@ -1,5 +1,7 @@
 package ui;
 
+import model.Cube;
+import model.CubeHandler;
 import persistence.JsonReader;
 import persistence.JsonWriter;
 
@@ -7,6 +9,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -35,7 +38,7 @@ public class CubeApp {
 
         checkLoad();
 
-        cubeHandler.print();
+        print(cubeHandler.getCube());
         while (run) {
             System.out.println("Type \"h\" for help, \"exit\" to exit");
             command = scan.nextLine();
@@ -90,21 +93,22 @@ public class CubeApp {
             printHelpMessage();
         } else if (command.equalsIgnoreCase("scramble")) {
             cubeHandler.scramble();
-            cubeHandler.print();
+            print(cubeHandler.getCube());
         } else if (command.equalsIgnoreCase("scramble string")) {
             getScramble();
         } else if (command.equalsIgnoreCase("reset")) {
             cubeHandler.reset();
-            cubeHandler.print();
+            print(cubeHandler.getCube());
         } else if (command.equalsIgnoreCase("save")) {
             cubeHandler.saveCube();
+            System.out.println("Cube saved.");
         } else if (command.equalsIgnoreCase("view")) {
-            cubeHandler.viewSavedCubes();
+            print(cubeHandler.getCube());
         } else if (load.find()) {
             cubeHandler.loadCube(Integer.parseInt(command.substring(5)));
         } else {
             cubeHandler.parseTurn(command);
-            cubeHandler.print();
+            print(cubeHandler.getCube());
         }
     }
 
@@ -113,7 +117,7 @@ public class CubeApp {
         System.out.println("Input your scramble string: ");
         String scrambleString = scan.nextLine();
         cubeHandler.parseScramble(scrambleString);
-        cubeHandler.print();
+        print(cubeHandler.getCube());
     }
 
     // EFFECTS: prints out the help message
@@ -152,5 +156,68 @@ public class CubeApp {
         } catch (IOException e) {
             System.out.println("Unable to read from file: " + JSON_STORE);
         }
+    }
+
+    // EFFECTS: displays the list of saved cubes
+    public void viewSavedCubes() {
+        for (int i = 0; i < cubeHandler.getSavedCubes().size(); i++) {
+            System.out.println(i + 1 + ". ");
+            print(cubeHandler.getSavedCubes().get(i));
+            System.out.println();
+        }
+    }
+
+    // EFFECTS: prints out a given cube
+    public void print(Cube cube) {
+        printCube(cube);
+    }
+
+    // EFFECTS: prints out the cube to the console
+    private void printCube(Cube cube) {
+        String[][] faceU = cube.getFace("U").to2DStringArray();
+        String[][] faceL = cube.getFace("L").to2DStringArray();
+        String[][] faceF = cube.getFace("F").to2DStringArray();
+        String[][] faceR = cube.getFace("R").to2DStringArray();
+        String[][] faceB = cube.getFace("B").to2DStringArray();
+        String[][] faceD = cube.getFace("D").to2DStringArray();
+
+        String[][] middle = new String[3][12];
+
+        for (int y = 0; y < 3; y++) {
+            String[] combined = Arrays.copyOf(faceL[y], 12);
+            System.arraycopy(faceF[y], 0, combined, 3, 3);
+            System.arraycopy(faceR[y], 0, combined, 6, 3);
+            System.arraycopy(faceB[y], 0, combined, 9, 3);
+            middle[y] = combined;
+        }
+
+        printFace(faceU, true);
+        printFace(middle, false);
+        printFace(faceD, true);
+    }
+
+    // EFFECTS: prints formatted 2D string array
+    private void printFace(String[][] faceToPrint, boolean padding) {
+
+        String row0 = "| " + String.join(" | ", faceToPrint[0]) + " |";
+        String row1 = "| " + String.join(" | ", faceToPrint[1]) + " |";
+        String row2 = "| " + String.join(" | ", faceToPrint[2]) + " |";
+        String dashSeparator = "-".repeat(row0.length());
+
+        if (padding) {
+            String whitespace = " ".repeat(row0.length() - 1);
+            row0 = whitespace + row0;
+            row1 = whitespace + row1;
+            row2 = whitespace + row2;
+            dashSeparator = whitespace + dashSeparator;
+        }
+
+        System.out.println(dashSeparator);
+        System.out.println(row0);
+        System.out.println(dashSeparator);
+        System.out.println(row1);
+        System.out.println(dashSeparator);
+        System.out.println(row2);
+        System.out.println(dashSeparator);
     }
 }

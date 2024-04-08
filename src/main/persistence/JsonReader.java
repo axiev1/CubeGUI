@@ -1,7 +1,7 @@
 package persistence;
 
 import org.json.JSONString;
-import ui.CubeHandler;
+import model.CubeHandler;
 import model.Cube;
 import model.Cubelet;
 import model.*;
