@@ -5,7 +5,6 @@ import org.json.JSONObject;
 import persistence.Writable;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 // Cube handler class to control the cube
 public class CubeHandler implements Writable {

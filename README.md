@@ -34,3 +34,19 @@ application to solve it for me
 - Sun Apr 07 20:55:10 PDT 2024 Cube reset.
 - Sun Apr 07 20:55:13 PDT 2024 Saved cube loaded.
 - Sun Apr 07 20:55:15 PDT 2024 Saved cube loaded.
+
+## Phase 4: Task 3
+Some refactoring could be done through representing the cube in a different way.
+For example, the cube could be represented by 6 lists (representing 6 faces), which each contain
+9 Strings that represent the color at a certain position. The benefit of this is that the cube 
+representation becomes easier to understand, and that the console ui becomes easier to implement.
+However, we run into the problem that implement rotations becomes very tedious, implementing proper
+scrambling becomes very difficult, and that the 3D model of the cubelet would be very challenging
+to create.
+
+Another way that the cube could be refactored would be by continuing to represent the cube through
+cubelets but by creating a new abstract class cubelet, and having a center cubelet, corner cubelet,
+and edge cubelet class extend it. This would allow the relationship between the cubelets to be more
+easily understood than right now, which has edge cubelets and corner cubelets extending the cubelet
+class, which also doubles at the center cubelet class. However, in this representation the
+center cubelet class would effectively be the same as the cubelet class.
