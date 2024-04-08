@@ -19,4 +19,18 @@ application to solve it for me
 - Be able to choose whether to save the state of the entire application on exit
 - Be able to choose whether to reload a saved state on application start
 
-##
+## Phase 4: Task 2
+- Sun Apr 07 20:55:01 PDT 2024 Cube rotated. 
+- Sun Apr 07 20:55:01 PDT 2024 Cube rotated.
+- Sun Apr 07 20:55:04 PDT 2024 Cube saved.
+- Sun Apr 07 20:55:05 PDT 2024 Cube scrambled.
+- Sun Apr 07 20:55:06 PDT 2024 Cube saved.
+- Sun Apr 07 20:55:07 PDT 2024 Cube reset.
+- Sun Apr 07 20:55:07 PDT 2024 Cube saved.
+- Sun Apr 07 20:55:08 PDT 2024 Cube rotated.
+- Sun Apr 07 20:55:08 PDT 2024 Cube rotated.
+- Sun Apr 07 20:55:09 PDT 2024 Cube rotated.
+- Sun Apr 07 20:55:09 PDT 2024 Cube saved.
+- Sun Apr 07 20:55:10 PDT 2024 Cube reset.
+- Sun Apr 07 20:55:13 PDT 2024 Saved cube loaded.
+- Sun Apr 07 20:55:15 PDT 2024 Saved cube loaded.
